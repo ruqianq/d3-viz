@@ -62,7 +62,7 @@ d3.csv("data/revenues.csv").then(data => {
       .attr("transform", "rotate(-40)")
 
   const yAxisCall = d3.axisLeft(y)
-    .ticks(10)
+    .ticks(5)
     .tickFormat(d => "$" + d)
   g.append("g")
     .attr("class", "y axis")
@@ -76,21 +76,9 @@ d3.csv("data/revenues.csv").then(data => {
   revenueBars
     .attr("y", d => y(d.revenue))
     .attr("x", d => x(d.month))
-    .attr("width", x.bandwidth)
+    .attr("width", x.bandwidth())
     .attr("height", d => HEIGHT - y(d.revenue))
     .attr("fill", "grey")
-
-  const profitBars = g.selectAll("rect")
-    .data(data)
-    .enter()
-    .append("rect")
-
-  profitBars
-    .attr("y", d => y(d.profit))
-    .attr("x", d => x(d.month))
-    .attr("width", x.bandwidth)
-    .attr("height", d => HEIGHT - y(d.profit))
-    .attr("fill", "red")
 
 })
 
