@@ -80,6 +80,18 @@ d3.csv("data/revenues.csv").then(data => {
     .attr("height", d => HEIGHT - y(d.revenue))
     .attr("fill", "grey")
 
+  const profitBars = g.selectAll("rect")
+    .data(data)
+    .enter()
+    .append("rect")
+
+  profitBars
+    .attr("y", d => y(d.profit))
+    .attr("x", d => x(d.month))
+    .attr("width", x.bandwidth)
+    .attr("height", d => HEIGHT - y(d.profit))
+    .attr("fill", "red")
+
 })
 
 // Or you could do this within the csv
