@@ -13,16 +13,25 @@ const svg = d3.select("#chart-area")
   .attr("width", WIDTH + MARGIN.LEFT + MARGIN.RIGHT)
   .attr("height", HEIGHT + MARGIN.TOP + MARGIN.BOTTOM)
 
+const g = svg.append("g")
+  .attr("transform", `translate(${MARGIN.LEFT}, ${MARGIN.TOP})`)
+
+// X label
+g.append("text")
+  .attr("class", "x axis-label")
+  .attr("x", WIDTH / 2)
+  .attr("y", HEIGHT + 110)
+  .attr("font-size", "20px")
+  .attr("text-anchor", "middle")
+  .text("Monthly Revenue of StarBreakCoffee 2018")
+
 d3.csv("data/revenues.csv").then(data => {
   data.forEach(d => {
     d.revenue = +d.revenue;
     d.profit = +d.profit
   })
 
-  const revenueBars = svg.selectAll("rect")
-    .data(data)
-    .enter()
-    .append("rect")
+
 
   const y = d3.scaleLinear()
     .domain([0, d3.max(data, d => d.revenue)])
@@ -34,6 +43,21 @@ d3.csv("data/revenues.csv").then(data => {
     .paddingInner(0.3)
     .paddingOuter(0.2)
 
+  const xAxisCall = d3.axisBottom(x)
+  g.append("g")
+    .attr("class", "x axis")
+    .attr("transform", `translate(0, ${HEIGHT})`)
+    .call(xAxisCall)
+    .selectAll("text")
+      .attr("y", "10")
+      .attr("x", "-5")
+      .attr("text-anchor", "end")
+      .attr("transform", "rotate(-40)")
+
+  const revenueBars = g.selectAll("rect")
+    .data(data)
+    .enter()
+    .append("rect")
 
   revenueBars
     .attr("y", d => y(d.revenue))
