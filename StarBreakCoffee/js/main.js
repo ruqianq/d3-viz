@@ -28,13 +28,18 @@ d3.csv("data/revenues.csv").then(data => {
     .domain([0, d3.max(data, d => d.revenue)])
     .range([HEIGHT, 0])
 
+  const x = d3.scaleBand()
+    .domain(data.map(d => d.month))
+    .range([0, WIDTH])
+    .paddingInner(0.3)
+    .paddingOuter(0.2)
+
+
   revenueBars
     .attr("y", d => y(d.revenue))
-    .attr("x", (d, i) => {
-      return i*60
-    })
-    .attr("width", 40)
-    .attr("height", d => d.revenue)
+    .attr("x", d => x(d.month))
+    .attr("width", x.bandwidth)
+    .attr("height", d => HEIGHT - y(d.revenue))
     .attr("fill", "grey")
 
 })
