@@ -32,7 +32,7 @@ g.append("text")
   .attr("font-size", "20px")
   .attr("text-anchor", "middle")
   .attr("transform", "rotate(-90)")
-  .text("Revenue ($)")
+  .text("Revenue")
 
 d3.csv("data/revenues.csv").then(data => {
   data.forEach(d => {
@@ -62,8 +62,8 @@ d3.csv("data/revenues.csv").then(data => {
       .attr("transform", "rotate(-40)")
 
   const yAxisCall = d3.axisLeft(y)
-    .ticks(3)
-    .tickFormat(d => d)
+    .ticks(10)
+    .tickFormat(d => "$" + d)
   g.append("g")
     .attr("class", "y axis")
     .call(yAxisCall)
