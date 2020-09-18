@@ -18,7 +18,21 @@ d3.csv("data/revenues.csv").then(data => {
     d.revenue = +d.revenue;
     d.profit = +d.profit
   })
-  console.log(data)
+
+  const revenueBars = svg.selectAll("rect")
+    .data(data)
+    .enter()
+    .append("rect")
+
+  revenueBars
+    .attr("y", 10)
+    .attr("x", (d, i) => {
+      return i*60
+    })
+    .attr("width", 40)
+    .attr("height", d => d.revenue)
+    .attr("fill", "grey")
+
 })
 
 // Or you could do this within the csv
