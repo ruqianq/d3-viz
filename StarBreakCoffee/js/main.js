@@ -24,8 +24,12 @@ d3.csv("data/revenues.csv").then(data => {
     .enter()
     .append("rect")
 
+  const y = d3.scaleLinear()
+    .domain([0, d3.max(data, d => d.revenue)])
+    .range([HEIGHT, 0])
+
   revenueBars
-    .attr("y", 10)
+    .attr("y", d => y(d.revenue))
     .attr("x", (d, i) => {
       return i*60
     })
