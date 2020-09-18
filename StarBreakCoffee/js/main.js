@@ -25,13 +25,20 @@ g.append("text")
   .attr("text-anchor", "middle")
   .text("Monthly Revenue of StarBreakCoffee 2018")
 
+g.append("text")
+  .attr("class", "y axis-label")
+  .attr("x", - (HEIGHT / 2))
+  .attr("y", -60)
+  .attr("font-size", "20px")
+  .attr("text-anchor", "middle")
+  .attr("transform", "rotate(-90)")
+  .text("Revenue ($)")
+
 d3.csv("data/revenues.csv").then(data => {
   data.forEach(d => {
     d.revenue = +d.revenue;
     d.profit = +d.profit
   })
-
-
 
   const y = d3.scaleLinear()
     .domain([0, d3.max(data, d => d.revenue)])
@@ -53,6 +60,13 @@ d3.csv("data/revenues.csv").then(data => {
       .attr("x", "-5")
       .attr("text-anchor", "end")
       .attr("transform", "rotate(-40)")
+
+  const yAxisCall = d3.axisLeft(y)
+    .ticks(3)
+    .tickFormat(d => d)
+  g.append("g")
+    .attr("class", "y axis")
+    .call(yAxisCall)
 
   const revenueBars = g.selectAll("rect")
     .data(data)
