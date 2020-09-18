@@ -21,3 +21,11 @@ d3.csv("data/revenues.csv").then(data => {
   console.log(data)
 })
 
+// Or you could do this within the csv
+//
+// d3.csv("data/revenues.csv", (data) => {
+//   data.forEach(d => {
+//     d.revenue = +d.revenue;
+//     d.profit = +d.profit
+//   })
+// })
