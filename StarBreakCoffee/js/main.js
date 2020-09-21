@@ -8,6 +8,8 @@ const MARGIN = { LEFT: 100, RIGHT: 10, TOP: 10, BOTTOM: 130 }
 const WIDTH = 600 - MARGIN.LEFT - MARGIN.RIGHT
 const HEIGHT = 400 - MARGIN.TOP - MARGIN.BOTTOM
 
+let flag = true
+
 const svg = d3.select("#chart-area")
   .append("svg")
   .attr("width", WIDTH + MARGIN.LEFT + MARGIN.RIGHT)
