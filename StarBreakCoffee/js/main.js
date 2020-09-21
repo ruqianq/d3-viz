@@ -22,10 +22,10 @@ const g = svg.append("g")
 g.append("text")
   .attr("class", "x axis-label")
   .attr("x", WIDTH / 2)
-  .attr("y", HEIGHT + 110)
+  .attr("y", HEIGHT + 60)
   .attr("font-size", "20px")
   .attr("text-anchor", "middle")
-  .text("Monthly Revenue of StarBreakCoffee 2018")
+  .text("Month")
 
 g.append("text")
   .attr("class", "y axis-label")
@@ -34,7 +34,23 @@ g.append("text")
   .attr("font-size", "20px")
   .attr("text-anchor", "middle")
   .attr("transform", "rotate(-90)")
-  .text("Revenue")
+
+const y = d3.scaleLinear()
+  .domain([0, d3.max(data, d => d.revenue)])
+  .range([HEIGHT, 0])
+
+const x = d3.scaleBand()
+  .domain(data.map(d => d.month))
+  .range([0, WIDTH])
+  .paddingInner(0.3)
+  .paddingOuter(0.2)
+
+const xAxisGroup = g.append("g")
+  .attr("class", "x axis")
+  .attr("transform", `translate(0, ${HEIGHT})`)
+
+const yAxisGroup = g.append("g")
+  .attr("class", "y axis")
 
 d3.csv("data/revenues.csv").then(data => {
   data.forEach(d => {
@@ -42,20 +58,23 @@ d3.csv("data/revenues.csv").then(data => {
     d.profit = +d.profit
   })
 
-  const y = d3.scaleLinear()
-    .domain([0, d3.max(data, d => d.revenue)])
-    .range([HEIGHT, 0])
+  d3.interval(() => {
+    flag = !flag
+    // hard code part
+    const newData = flag ? data : data.slice(1)
+    update(newData)
+  }, 1000)
 
-  const x = d3.scaleBand()
-    .domain(data.map(d => d.month))
-    .range([0, WIDTH])
-    .paddingInner(0.3)
-    .paddingOuter(0.2)
+  update(data)
+})
+
+function update(data) {
+
+}
+
 
   const xAxisCall = d3.axisBottom(x)
-  g.append("g")
-    .attr("class", "x axis")
-    .attr("transform", `translate(0, ${HEIGHT})`)
+  xAxisGroup.transition(t)
     .call(xAxisCall)
     .selectAll("text")
       .attr("y", "10")
@@ -66,8 +85,7 @@ d3.csv("data/revenues.csv").then(data => {
   const yAxisCall = d3.axisLeft(y)
     .ticks(5)
     .tickFormat(d => "$" + d)
-  g.append("g")
-    .attr("class", "y axis")
+  yAxisGroup.transition(t)
     .call(yAxisCall)
 
   const revenueBars = g.selectAll("rect")
@@ -82,7 +100,7 @@ d3.csv("data/revenues.csv").then(data => {
     .attr("height", d => HEIGHT - y(d.revenue))
     .attr("fill", "grey")
 
-})
+
 
 // Or you could do this within the csv
 //
