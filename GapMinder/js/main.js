@@ -13,8 +13,10 @@ const svg = d3.select("#chart-area").append("svg")
 	.attr("height", HEIGHT + MARGIN.TOP + MARGIN.BOTTOM)
 
 const g = svg.append("g")
-
+	.attr("transform", `translate(${MARGIN.LEFT}, ${MARGIN.TOP})`)
 
 d3.json("data/data.json").then(function(data){
-	console.log(data);
+	const firstYearData = data[0]['countries']
+
+	console.log(firstYearData)
 })
