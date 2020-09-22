@@ -62,6 +62,7 @@ g.append("g")
 
 d3.json("data/data.json").then(function (data) {
   const allData = data.map((y) => {
+    // need to normalized the data
     return y.countries.filter((c) => (c.income !== null && c.life_exp !== null
       && c.population !== null
     ))
