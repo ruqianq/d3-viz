@@ -27,5 +27,19 @@ d3.json("data/data.json").then(function(data){
 	d3.interval(() => {
 		year += 1
 	}, 1000)
-
+	update(allData[0])
 })
+
+function update(data) {
+	const t = d3.transition().duration(750)
+
+	const circles = g.selectAll("circle")
+		.data(data)
+
+	circles.enter()
+		.append("circle")
+		.attr("fill", "red")
+		.attr("cy", (d) => d.life_exp)
+		.attr("r", (d) => d.population)
+		.attr("cx", (d) => d.income)
+}
