@@ -31,21 +31,33 @@ d3.json("data/data.json").then(function (data) {
   })
 
   d3.interval(() => {
-    year += 1
-  }, 1000)
+    year = (year < 214) ? year + 1 : 0
+    update(allData[year])
+  }, 100)
+
+  // first run of the visualization
   update(allData[0])
 })
 
 function update(data) {
-  const t = d3.transition().duration(750)
+  const t = d3.transition().duration(100)
 
+  // JOIN new data with old elements.
   const circles = g.selectAll("circle")
     .data(data, d => d.country)
+
+  // EXIT old elements not present in new data.
+  circles.exit().remove()
+
+  // ENTER new elements present in new data...
 
   circles.enter()
     .append("circle")
     .attr("fill", (d) => continentColor(d.continent))
-    .attr("cy", (d) => y(d.life_exp))
-    .attr("r", d => Math.sqrt(area(d.population) / Math.PI))
-    .attr("cx", (d) => x(d.income))
+    .merge(circles)
+    .transition(t)
+      .attr("cy", (d) => y(d.life_exp))
+      .attr("r", d => Math.sqrt(area(d.population) / Math.PI))
+      .attr("cx", (d) => x(d.income))
+
 }
