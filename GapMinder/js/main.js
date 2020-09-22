@@ -23,6 +23,28 @@ const y = d3.scaleLinear().range([HEIGHT, 0]).domain([0, 90])
 const area = d3.scaleLinear().range([25 * Math.PI, 1500 * Math.PI]).domain([2000, 1400000000])
 const continentColor = d3.scaleOrdinal(d3.schemePastel1)
 
+// Labels
+const xLabel = g.append("text")
+  .attr("y", HEIGHT + 50)
+  .attr("x", WIDTH / 2)
+  .attr("font-size", "20px")
+  .attr("text-anchor", "middle")
+  .text("GDP Per Capita ($)")
+const yLabel = g.append("text")
+  .attr("transform", "rotate(-90)")
+  .attr("y", -40)
+  .attr("x", -170)
+  .attr("font-size", "20px")
+  .attr("text-anchor", "middle")
+  .text("Life Expectancy (Years)")
+const timeLabel = g.append("text")
+  .attr("y", HEIGHT - 10)
+  .attr("x", WIDTH - 40)
+  .attr("font-size", "40px")
+  .attr("opacity", "0.4")
+  .attr("text-anchor", "middle")
+  .text("1800")
+
 d3.json("data/data.json").then(function (data) {
   const allData = data.map((y) => {
     return y.countries.filter((c) => (c.income !== null && c.life_exp !== null
@@ -31,6 +53,7 @@ d3.json("data/data.json").then(function (data) {
   })
 
   d3.interval(() => {
+    // hard coded
     year = (year < 214) ? year + 1 : 0
     update(allData[year])
   }, 100)
@@ -56,8 +79,8 @@ function update(data) {
     .attr("fill", (d) => continentColor(d.continent))
     .merge(circles)
     .transition(t)
-      .attr("cy", (d) => y(d.life_exp))
-      .attr("r", d => Math.sqrt(area(d.population) / Math.PI))
-      .attr("cx", (d) => x(d.income))
+    .attr("cy", (d) => y(d.life_exp))
+    .attr("r", d => Math.sqrt(area(d.population) / Math.PI))
+    .attr("cx", (d) => x(d.income))
 
 }
