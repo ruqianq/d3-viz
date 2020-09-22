@@ -17,6 +17,10 @@ const svg = d3.select("#chart-area").append("svg")
 const g = svg.append("g")
 	.attr("transform", `translate(${MARGIN.LEFT}, ${MARGIN.TOP})`)
 
+// hard coded domain, need to change
+const x = d3.scaleLog().base(10).range([0, WIDTH]).domain([142, 150000])
+const y = d3.scaleLinear().range([HEIGHT, 0]).domain([0, 90])
+
 d3.json("data/data.json").then(function(data){
 	const allData = data.map((y) => {
 		return y.countries.filter((c) => (c.income !== null && c.life_exp !== null
@@ -34,12 +38,12 @@ function update(data) {
 	const t = d3.transition().duration(750)
 
 	const circles = g.selectAll("circle")
-		.data(data)
+		.data(data, d => d.country)
 
 	circles.enter()
 		.append("circle")
 		.attr("fill", "red")
-		.attr("cy", (d) => d.life_exp)
-		.attr("r", (d) => d.population)
-		.attr("cx", (d) => d.income)
+		.attr("cy", (d) => y(d.life_exp))
+		.attr("r", 5)
+		.attr("cx", (d) => x(d.income))
 }
