@@ -20,5 +20,14 @@ d3.json("data/data.json").then(function(data){
 		&& c.population !== null
 	))
 
-	console.log(firstYearData)
+	const allData = data.map((y) => {
+		return y.countries.filter((c) => (c.income !== null && c.life_exp !== null
+			&& c.population !== null
+		))
+	})
+
+	d3.interval(() => {
+
+	}, 1000)
+
 })
