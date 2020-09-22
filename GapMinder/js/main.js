@@ -45,6 +45,21 @@ const timeLabel = g.append("text")
   .attr("text-anchor", "middle")
   .text("1800")
 
+// X Axis
+const xAxisCall = d3.axisBottom(x)
+  .tickValues([400, 4000, 40000])
+  .tickFormat(d3.format("$"));
+g.append("g")
+  .attr("class", "x axis")
+  .attr("transform", `translate(0, ${HEIGHT})`)
+  .call(xAxisCall)
+
+// Y Axis
+const yAxisCall = d3.axisLeft(y)
+g.append("g")
+  .attr("class", "y axis")
+  .call(yAxisCall)
+
 d3.json("data/data.json").then(function (data) {
   const allData = data.map((y) => {
     return y.countries.filter((c) => (c.income !== null && c.life_exp !== null
