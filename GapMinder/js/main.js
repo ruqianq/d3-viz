@@ -5,8 +5,8 @@
 */
 
 const MARGIN = { LEFT: 100, RIGHT: 10, TOP: 10, BOTTOM: 100 }
-const WIDTH = 600 - MARGIN.LEFT - MARGIN.RIGHT
-const HEIGHT = 400 - MARGIN.TOP - MARGIN.BOTTOM
+const WIDTH = 800 - MARGIN.LEFT - MARGIN.RIGHT
+const HEIGHT = 500 - MARGIN.TOP - MARGIN.BOTTOM
 
 let year = 0
 
@@ -20,6 +20,9 @@ const g = svg.append("g")
 // hard coded domain, need to change
 const x = d3.scaleLog().base(10).range([0, WIDTH]).domain([142, 150000])
 const y = d3.scaleLinear().range([HEIGHT, 0]).domain([0, 90])
+const area = d3.scaleLinear()
+	.range([25*Math.PI, 1500*Math.PI])
+	.domain([2000, 1400000000])
 
 d3.json("data/data.json").then(function(data){
 	const allData = data.map((y) => {
@@ -44,6 +47,6 @@ function update(data) {
 		.append("circle")
 		.attr("fill", "red")
 		.attr("cy", (d) => y(d.life_exp))
-		.attr("r", 5)
+		.attr("r", d => Math.sqrt(area(d.population) / Math.PI))
 		.attr("cx", (d) => x(d.income))
 }
