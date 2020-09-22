@@ -58,8 +58,7 @@ d3.csv("data/revenues.csv").then(data => {
 
   d3.interval(() => {
     flag = !flag
-    const newData = flag ? data : data.slice(1)
-    update(newData)
+    update(data)
   }, 1000)
 
   update(data)
