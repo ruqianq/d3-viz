@@ -68,8 +68,7 @@ d3.json("data/data.json").then(function (data) {
   })
 
   d3.interval(() => {
-    // hard coded
-    year = (year < 214) ? year + 1 : 0
+    year = (year < allData[year].length) ? year + 1 : 0
     update(allData[year])
   }, 100)
 
@@ -98,4 +97,5 @@ function update(data) {
     .attr("r", d => Math.sqrt(area(d.population) / Math.PI))
     .attr("cx", (d) => x(d.income))
 
+  timeLabel.text(String(year + 1800))
 }
