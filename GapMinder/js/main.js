@@ -16,7 +16,9 @@ const g = svg.append("g")
 	.attr("transform", `translate(${MARGIN.LEFT}, ${MARGIN.TOP})`)
 
 d3.json("data/data.json").then(function(data){
-	const firstYearData = data[0]['countries']
+	const firstYearData = data[0]['countries'].filter((c) => (c.income !== null && c.life_exp !== null
+		&& c.population !== null
+	))
 
 	console.log(firstYearData)
 })
