@@ -8,8 +8,6 @@ const MARGIN = {LEFT: 100, RIGHT: 10, TOP: 10, BOTTOM: 100}
 const WIDTH = 600 - MARGIN.LEFT - MARGIN.RIGHT
 const HEIGHT = 400 - MARGIN.TOP - MARGIN.BOTTOM
 
-let flag = true
-
 const svg = d3.select("#chart-area").append("svg")
   .attr("width", WIDTH + MARGIN.LEFT + MARGIN.RIGHT)
   .attr("height", HEIGHT + MARGIN.TOP + MARGIN.BOTTOM)
@@ -43,81 +41,9 @@ const x = d3.scaleBand()
 const y = d3.scaleLinear()
   .range([HEIGHT, 0])
 
-const xAxisGroup = g.append("g")
-  .attr("class", "x axis")
-  .attr("transform", `translate(0, ${HEIGHT})`)
-
-const yAxisGroup = g.append("g")
-  .attr("class", "y axis")
-
-d3.csv("data/vehicle_accidents.csv.csv").then(data => {
-  data.forEach(d => {
-    d.revenue = Number(d.revenue)
-    d.profit = Number(d.profit)
-  })
-
-  d3.interval(() => {
-    flag = !flag
-    update(data)
-  }, 1000)
-
-  update(data)
+d3.csv("data/vehicle_accidents.csv").then(data => {
+  data.forEach(d => d.Frequency = Number(d.Frequency))
+  let testData = data.filter((d) => {return d.vehicle_make_name === "Acura"}
+  )
+  console.log(testData)
 })
-
-function update(data) {
-  const value = flag ? "profit" : "revenue"
-  const t = d3.transition().duration(750)
-
-  x.domain(data.map(d => d.month))
-  y.domain([0, d3.max(data, d => d[value])])
-
-  const xAxisCall = d3.axisBottom(x)
-  xAxisGroup.transition(t).call(xAxisCall)
-    .selectAll("text")
-    .attr("y", "10")
-    .attr("x", "-5")
-    .attr("text-anchor", "end")
-    .attr("transform", "rotate(-40)")
-
-  const yAxisCall = d3.axisLeft(y)
-    .ticks(5)
-    .tickFormat(d => "$" + d)
-  yAxisGroup.transition(t).call(yAxisCall)
-
-  // JOIN new data with old elements.
-  const rects = g.selectAll("rect")
-    .data(data, d => d.month)
-
-  // EXIT old elements not present in new data.
-  rects.exit()
-    .attr("fill", "red")
-    .transition(t)
-    .attr("height", 0)
-    .attr("y", y(0))
-    .remove()
-
-  // ENTER new elements present in new data...
-  rects.enter().append("rect")
-    .attr("fill", "grey")
-    .attr("y", y(0))
-    .attr("height", 0)
-    // AND UPDATE old elements present in new data.
-    .merge(rects)
-    .transition(t)
-    .attr("x", (d) => x(d.month))
-    .attr("width", x.bandwidth)
-    .attr("y", d => y(d[value]))
-    .attr("height", d => HEIGHT - y(d[value]))
-
-  const text = flag ? "Profit ($)" : "Revenue ($)"
-  yLabel.text(text)
-}
-
-// Or you could do this within the csv
-//
-// d3.csv("data/revenues.csv", (data) => {
-//   data.forEach(d => {
-//     d.revenue = +d.revenue;
-//     d.profit = +d.profit
-//   })
-// })
