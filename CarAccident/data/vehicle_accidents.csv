@@ -1,0 +1,2669 @@
+﻿"vehicle_make_name","Frequency","sas_yr_of_crsh","sas_mnth_of_crsh"
+"","631","2015","Jan"
+"","471","2015","Feb"
+"","523","2015","Mar"
+"","453","2015","Apr"
+"","476","2015","May"
+"","554","2015","Jun"
+"","528","2015","Jul"
+"","542","2015","Aug"
+"","662","2015","Sep"
+"","750","2015","Oct"
+"","714","2015","Nov"
+"","760","2015","Dec"
+"","597","2016","Jan"
+"","569","2016","Feb"
+"","575","2016","Mar"
+"","549","2016","Apr"
+"","578","2016","May"
+"","566","2016","Jun"
+"","522","2016","Jul"
+"","671","2016","Aug"
+"","666","2016","Sep"
+"","832","2016","Oct"
+"","780","2016","Nov"
+"","756","2016","Dec"
+"Acura","45","2015","Jan"
+"Acura","50","2015","Feb"
+"Acura","54","2015","Mar"
+"Acura","37","2015","Apr"
+"Acura","49","2015","May"
+"Acura","53","2015","Jun"
+"Acura","43","2015","Jul"
+"Acura","43","2015","Aug"
+"Acura","54","2015","Sep"
+"Acura","47","2015","Oct"
+"Acura","47","2015","Nov"
+"Acura","37","2015","Dec"
+"Acura","53","2016","Jan"
+"Acura","36","2016","Feb"
+"Acura","67","2016","Mar"
+"Acura","54","2016","Apr"
+"Acura","47","2016","May"
+"Acura","28","2016","Jun"
+"Acura","42","2016","Jul"
+"Acura","46","2016","Aug"
+"Acura","58","2016","Sep"
+"Acura","57","2016","Oct"
+"Acura","51","2016","Nov"
+"Acura","40","2016","Dec"
+"AM General","7","2015","Jan"
+"AM General","11","2015","Feb"
+"AM General","5","2015","Apr"
+"AM General","10","2015","May"
+"AM General","6","2015","Jun"
+"AM General","8","2015","Jul"
+"AM General","1","2015","Sep"
+"AM General","4","2015","Oct"
+"AM General","6","2015","Nov"
+"AM General","1","2015","Dec"
+"AM General","2","2016","Jan"
+"AM General","7","2016","Feb"
+"AM General","2","2016","Mar"
+"AM General","11","2016","Apr"
+"AM General","16","2016","May"
+"AM General","3","2016","Jun"
+"AM General","4","2016","Jul"
+"AM General","1","2016","Aug"
+"AM General","10","2016","Sep"
+"AM General","11","2016","Oct"
+"AM General","3","2016","Nov"
+"AM General","27","2016","Dec"
+"American Motors","1","2015","Feb"
+"American Motors","3","2015","Sep"
+"American Motors","2","2015","Dec"
+"American Motors","1","2016","Feb"
+"American Motors","2","2016","Jun"
+"American Motors","1","2016","Dec"
+"Audi","14","2015","Jan"
+"Audi","7","2015","Feb"
+"Audi","10","2015","Mar"
+"Audi","14","2015","Apr"
+"Audi","34","2015","May"
+"Audi","13","2015","Jun"
+"Audi","20","2015","Jul"
+"Audi","17","2015","Aug"
+"Audi","15","2015","Sep"
+"Audi","16","2015","Oct"
+"Audi","30","2015","Nov"
+"Audi","14","2015","Dec"
+"Audi","37","2016","Jan"
+"Audi","15","2016","Feb"
+"Audi","8","2016","Mar"
+"Audi","30","2016","Apr"
+"Audi","21","2016","May"
+"Audi","21","2016","Jun"
+"Audi","12","2016","Jul"
+"Audi","14","2016","Aug"
+"Audi","24","2016","Sep"
+"Audi","26","2016","Oct"
+"Audi","24","2016","Nov"
+"Audi","25","2016","Dec"
+"Austin/Austin Healey","1","2015","Sep"
+"Bluebird","75","2015","Jan"
+"Bluebird","1","2015","Mar"
+"Bluebird","4","2015","Apr"
+"Bluebird","1","2015","May"
+"Bluebird","1","2015","Jun"
+"Bluebird","1","2015","Jul"
+"Bluebird","9","2015","Aug"
+"Bluebird","13","2015","Sep"
+"Bluebird","8","2015","Oct"
+"Bluebird","1","2015","Nov"
+"Bluebird","1","2015","Dec"
+"Bluebird","5","2016","Jan"
+"Bluebird","40","2016","Feb"
+"Bluebird","2","2016","Apr"
+"Bluebird","2","2016","May"
+"Bluebird","5","2016","Jun"
+"Bluebird","34","2016","Jul"
+"Bluebird","10","2016","Aug"
+"Bluebird","2","2016","Sep"
+"Bluebird","19","2016","Oct"
+"Bluebird","5","2016","Nov"
+"Bluebird","1","2016","Dec"
+"BMW","60","2015","Jan"
+"BMW","33","2015","Feb"
+"BMW","48","2015","Mar"
+"BMW","55","2015","Apr"
+"BMW","50","2015","May"
+"BMW","69","2015","Jun"
+"BMW","57","2015","Jul"
+"BMW","66","2015","Aug"
+"BMW","59","2015","Sep"
+"BMW","68","2015","Oct"
+"BMW","62","2015","Nov"
+"BMW","81","2015","Dec"
+"BMW","46","2016","Jan"
+"BMW","55","2016","Feb"
+"BMW","50","2016","Mar"
+"BMW","53","2016","Apr"
+"BMW","59","2016","May"
+"BMW","67","2016","Jun"
+"BMW","91","2016","Jul"
+"BMW","71","2016","Aug"
+"BMW","63","2016","Sep"
+"BMW","65","2016","Oct"
+"BMW","61","2016","Nov"
+"BMW","83","2016","Dec"
+"Buick/Opel","80","2015","Jan"
+"Buick/Opel","70","2015","Feb"
+"Buick/Opel","88","2015","Mar"
+"Buick/Opel","72","2015","Apr"
+"Buick/Opel","118","2015","May"
+"Buick/Opel","115","2015","Jun"
+"Buick/Opel","131","2015","Jul"
+"Buick/Opel","111","2015","Aug"
+"Buick/Opel","126","2015","Sep"
+"Buick/Opel","107","2015","Oct"
+"Buick/Opel","108","2015","Nov"
+"Buick/Opel","81","2015","Dec"
+"Buick/Opel","119","2016","Jan"
+"Buick/Opel","128","2016","Feb"
+"Buick/Opel","103","2016","Mar"
+"Buick/Opel","111","2016","Apr"
+"Buick/Opel","111","2016","May"
+"Buick/Opel","89","2016","Jun"
+"Buick/Opel","97","2016","Jul"
+"Buick/Opel","147","2016","Aug"
+"Buick/Opel","146","2016","Sep"
+"Buick/Opel","124","2016","Oct"
+"Buick/Opel","111","2016","Nov"
+"Buick/Opel","102","2016","Dec"
+"Cadillac","62","2015","Jan"
+"Cadillac","41","2015","Feb"
+"Cadillac","52","2015","Mar"
+"Cadillac","52","2015","Apr"
+"Cadillac","51","2015","May"
+"Cadillac","72","2015","Jun"
+"Cadillac","63","2015","Jul"
+"Cadillac","64","2015","Aug"
+"Cadillac","56","2015","Sep"
+"Cadillac","51","2015","Oct"
+"Cadillac","57","2015","Nov"
+"Cadillac","70","2015","Dec"
+"Cadillac","45","2016","Jan"
+"Cadillac","63","2016","Feb"
+"Cadillac","53","2016","Mar"
+"Cadillac","61","2016","Apr"
+"Cadillac","44","2016","May"
+"Cadillac","49","2016","Jun"
+"Cadillac","82","2016","Jul"
+"Cadillac","55","2016","Aug"
+"Cadillac","50","2016","Sep"
+"Cadillac","65","2016","Oct"
+"Cadillac","73","2016","Nov"
+"Cadillac","66","2016","Dec"
+"Chevrolet","879","2015","Jan"
+"Chevrolet","647","2015","Feb"
+"Chevrolet","931","2015","Mar"
+"Chevrolet","842","2015","Apr"
+"Chevrolet","983","2015","May"
+"Chevrolet","879","2015","Jun"
+"Chevrolet","1,095","2015","Jul"
+"Chevrolet","1,026","2015","Aug"
+"Chevrolet","859","2015","Sep"
+"Chevrolet","952","2015","Oct"
+"Chevrolet","906","2015","Nov"
+"Chevrolet","1,061","2015","Dec"
+"Chevrolet","759","2016","Jan"
+"Chevrolet","841","2016","Feb"
+"Chevrolet","883","2016","Mar"
+"Chevrolet","866","2016","Apr"
+"Chevrolet","1,010","2016","May"
+"Chevrolet","1,052","2016","Jun"
+"Chevrolet","1,091","2016","Jul"
+"Chevrolet","1,028","2016","Aug"
+"Chevrolet","934","2016","Sep"
+"Chevrolet","989","2016","Oct"
+"Chevrolet","942","2016","Nov"
+"Chevrolet","962","2016","Dec"
+"Chrysler","83","2015","Jan"
+"Chrysler","95","2015","Feb"
+"Chrysler","116","2015","Mar"
+"Chrysler","129","2015","Apr"
+"Chrysler","141","2015","May"
+"Chrysler","115","2015","Jun"
+"Chrysler","155","2015","Jul"
+"Chrysler","153","2015","Aug"
+"Chrysler","148","2015","Sep"
+"Chrysler","129","2015","Oct"
+"Chrysler","119","2015","Nov"
+"Chrysler","144","2015","Dec"
+"Chrysler","94","2016","Jan"
+"Chrysler","108","2016","Feb"
+"Chrysler","144","2016","Mar"
+"Chrysler","135","2016","Apr"
+"Chrysler","139","2016","May"
+"Chrysler","153","2016","Jun"
+"Chrysler","150","2016","Jul"
+"Chrysler","116","2016","Aug"
+"Chrysler","154","2016","Sep"
+"Chrysler","161","2016","Oct"
+"Chrysler","137","2016","Nov"
+"Chrysler","168","2016","Dec"
+"Daewoo","2","2015","Feb"
+"Daewoo","1","2015","Mar"
+"Daewoo","1","2015","Apr"
+"Daewoo","2","2015","May"
+"Daewoo","1","2015","Oct"
+"Daewoo","1","2016","Mar"
+"Daewoo","3","2016","Jun"
+"Daewoo","1","2016","Aug"
+"Daewoo","1","2016","Dec"
+"Daihatsu","1","2016","Oct"
+"Datsun/Nissan","269","2015","Jan"
+"Datsun/Nissan","228","2015","Feb"
+"Datsun/Nissan","247","2015","Mar"
+"Datsun/Nissan","289","2015","Apr"
+"Datsun/Nissan","277","2015","May"
+"Datsun/Nissan","281","2015","Jun"
+"Datsun/Nissan","351","2015","Jul"
+"Datsun/Nissan","307","2015","Aug"
+"Datsun/Nissan","304","2015","Sep"
+"Datsun/Nissan","349","2015","Oct"
+"Datsun/Nissan","351","2015","Nov"
+"Datsun/Nissan","359","2015","Dec"
+"Datsun/Nissan","251","2016","Jan"
+"Datsun/Nissan","287","2016","Feb"
+"Datsun/Nissan","264","2016","Mar"
+"Datsun/Nissan","289","2016","Apr"
+"Datsun/Nissan","316","2016","May"
+"Datsun/Nissan","335","2016","Jun"
+"Datsun/Nissan","365","2016","Jul"
+"Datsun/Nissan","349","2016","Aug"
+"Datsun/Nissan","312","2016","Sep"
+"Datsun/Nissan","361","2016","Oct"
+"Datsun/Nissan","368","2016","Nov"
+"Datsun/Nissan","339","2016","Dec"
+"Dodge","342","2015","Jan"
+"Dodge","323","2015","Feb"
+"Dodge","383","2015","Mar"
+"Dodge","366","2015","Apr"
+"Dodge","465","2015","May"
+"Dodge","423","2015","Jun"
+"Dodge","499","2015","Jul"
+"Dodge","479","2015","Aug"
+"Dodge","418","2015","Sep"
+"Dodge","446","2015","Oct"
+"Dodge","499","2015","Nov"
+"Dodge","423","2015","Dec"
+"Dodge","349","2016","Jan"
+"Dodge","345","2016","Feb"
+"Dodge","396","2016","Mar"
+"Dodge","336","2016","Apr"
+"Dodge","487","2016","May"
+"Dodge","487","2016","Jun"
+"Dodge","480","2016","Jul"
+"Dodge","455","2016","Aug"
+"Dodge","478","2016","Sep"
+"Dodge","479","2016","Oct"
+"Dodge","441","2016","Nov"
+"Dodge","483","2016","Dec"
+"Ducati","1","2015","Jan"
+"Ducati","2","2015","Feb"
+"Ducati","2","2015","Mar"
+"Ducati","3","2015","Apr"
+"Ducati","6","2015","May"
+"Ducati","2","2015","Jun"
+"Ducati","8","2015","Jul"
+"Ducati","6","2015","Aug"
+"Ducati","4","2015","Sep"
+"Ducati","12","2015","Oct"
+"Ducati","5","2015","Nov"
+"Ducati","2","2015","Dec"
+"Ducati","1","2016","Jan"
+"Ducati","3","2016","Feb"
+"Ducati","1","2016","Mar"
+"Ducati","6","2016","Apr"
+"Ducati","8","2016","May"
+"Ducati","4","2016","Jun"
+"Ducati","8","2016","Jul"
+"Ducati","4","2016","Aug"
+"Ducati","4","2016","Sep"
+"Ducati","4","2016","Oct"
+"Ducati","1","2016","Nov"
+"Eagle","3","2015","Jul"
+"Eagle","1","2016","Jan"
+"Eagle","2","2016","Apr"
+"Eagle","2","2016","Jun"
+"Eagle","1","2016","Oct"
+"Eagle","1","2016","Nov"
+"Fiat","1","2015","Jan"
+"Fiat","1","2015","Feb"
+"Fiat","2","2015","Mar"
+"Fiat","1","2015","Jun"
+"Fiat","1","2015","Jul"
+"Fiat","1","2015","Aug"
+"Fiat","2","2015","Sep"
+"Fiat","3","2015","Oct"
+"Fiat","1","2015","Nov"
+"Fiat","1","2015","Dec"
+"Fiat","1","2016","Jan"
+"Fiat","1","2016","Feb"
+"Fiat","1","2016","Mar"
+"Fiat","7","2016","Apr"
+"Fiat","1","2016","May"
+"Fiat","5","2016","Jun"
+"Fiat","3","2016","Aug"
+"Fiat","3","2016","Sep"
+"Fiat","1","2016","Nov"
+"Fiat","1","2016","Dec"
+"Ford","841","2015","Jan"
+"Ford","761","2015","Feb"
+"Ford","910","2015","Mar"
+"Ford","845","2015","Apr"
+"Ford","963","2015","May"
+"Ford","993","2015","Jun"
+"Ford","1,003","2015","Jul"
+"Ford","1,038","2015","Aug"
+"Ford","997","2015","Sep"
+"Ford","1,017","2015","Oct"
+"Ford","1,036","2015","Nov"
+"Ford","1,025","2015","Dec"
+"Ford","770","2016","Jan"
+"Ford","841","2016","Feb"
+"Ford","894","2016","Mar"
+"Ford","923","2016","Apr"
+"Ford","941","2016","May"
+"Ford","1,070","2016","Jun"
+"Ford","1,069","2016","Jul"
+"Ford","1,053","2016","Aug"
+"Ford","1,068","2016","Sep"
+"Ford","1,099","2016","Oct"
+"Ford","996","2016","Nov"
+"Ford","987","2016","Dec"
+"Freightliner","100","2015","Jan"
+"Freightliner","112","2015","Feb"
+"Freightliner","137","2015","Mar"
+"Freightliner","120","2015","Apr"
+"Freightliner","110","2015","May"
+"Freightliner","119","2015","Jun"
+"Freightliner","103","2015","Jul"
+"Freightliner","111","2015","Aug"
+"Freightliner","103","2015","Sep"
+"Freightliner","140","2015","Oct"
+"Freightliner","114","2015","Nov"
+"Freightliner","126","2015","Dec"
+"Freightliner","98","2016","Jan"
+"Freightliner","109","2016","Feb"
+"Freightliner","98","2016","Mar"
+"Freightliner","124","2016","Apr"
+"Freightliner","130","2016","May"
+"Freightliner","130","2016","Jun"
+"Freightliner","126","2016","Jul"
+"Freightliner","141","2016","Aug"
+"Freightliner","174","2016","Sep"
+"Freightliner","124","2016","Oct"
+"Freightliner","121","2016","Nov"
+"Freightliner","124","2016","Dec"
+"Gillig","4","2015","Jan"
+"Gillig","3","2015","Feb"
+"Gillig","9","2015","Mar"
+"Gillig","26","2015","Apr"
+"Gillig","1","2015","May"
+"Gillig","4","2015","Jun"
+"Gillig","6","2015","Jul"
+"Gillig","6","2015","Aug"
+"Gillig","21","2015","Sep"
+"Gillig","2","2015","Oct"
+"Gillig","5","2015","Nov"
+"Gillig","2","2015","Dec"
+"Gillig","5","2016","Jan"
+"Gillig","1","2016","Feb"
+"Gillig","21","2016","Mar"
+"Gillig","1","2016","Apr"
+"Gillig","7","2016","May"
+"Gillig","1","2016","Jul"
+"Gillig","12","2016","Aug"
+"Gillig","5","2016","Sep"
+"Gillig","15","2016","Oct"
+"Gillig","1","2016","Nov"
+"Gillig","4","2016","Dec"
+"GMC","169","2015","Jan"
+"GMC","149","2015","Feb"
+"GMC","179","2015","Mar"
+"GMC","186","2015","Apr"
+"GMC","182","2015","May"
+"GMC","252","2015","Jun"
+"GMC","240","2015","Jul"
+"GMC","217","2015","Aug"
+"GMC","235","2015","Sep"
+"GMC","231","2015","Oct"
+"GMC","219","2015","Nov"
+"GMC","253","2015","Dec"
+"GMC","178","2016","Jan"
+"GMC","192","2016","Feb"
+"GMC","199","2016","Mar"
+"GMC","180","2016","Apr"
+"GMC","211","2016","May"
+"GMC","268","2016","Jun"
+"GMC","246","2016","Jul"
+"GMC","209","2016","Aug"
+"GMC","223","2016","Sep"
+"GMC","211","2016","Oct"
+"GMC","222","2016","Nov"
+"GMC","202","2016","Dec"
+"Grumman","1","2015","Jan"
+"Grumman","1","2015","May"
+"Grumman","1","2015","Jun"
+"Grumman","1","2016","Jan"
+"Grumman","1","2016","Apr"
+"Grumman","1","2016","May"
+"Grumman","2","2016","Sep"
+"Harley-Davidson","66","2015","Jan"
+"Harley-Davidson","50","2015","Feb"
+"Harley-Davidson","113","2015","Mar"
+"Harley-Davidson","159","2015","Apr"
+"Harley-Davidson","262","2015","May"
+"Harley-Davidson","259","2015","Jun"
+"Harley-Davidson","266","2015","Jul"
+"Harley-Davidson","274","2015","Aug"
+"Harley-Davidson","242","2015","Sep"
+"Harley-Davidson","193","2015","Oct"
+"Harley-Davidson","81","2015","Nov"
+"Harley-Davidson","78","2015","Dec"
+"Harley-Davidson","62","2016","Jan"
+"Harley-Davidson","104","2016","Feb"
+"Harley-Davidson","133","2016","Mar"
+"Harley-Davidson","214","2016","Apr"
+"Harley-Davidson","280","2016","May"
+"Harley-Davidson","282","2016","Jun"
+"Harley-Davidson","317","2016","Jul"
+"Harley-Davidson","266","2016","Aug"
+"Harley-Davidson","276","2016","Sep"
+"Harley-Davidson","245","2016","Oct"
+"Harley-Davidson","146","2016","Nov"
+"Harley-Davidson","52","2016","Dec"
+"Honda","361","2015","Jan"
+"Honda","329","2015","Feb"
+"Honda","354","2015","Mar"
+"Honda","381","2015","Apr"
+"Honda","472","2015","May"
+"Honda","490","2015","Jun"
+"Honda","512","2015","Jul"
+"Honda","496","2015","Aug"
+"Honda","469","2015","Sep"
+"Honda","474","2015","Oct"
+"Honda","372","2015","Nov"
+"Honda","449","2015","Dec"
+"Honda","357","2016","Jan"
+"Honda","400","2016","Feb"
+"Honda","462","2016","Mar"
+"Honda","446","2016","Apr"
+"Honda","497","2016","May"
+"Honda","563","2016","Jun"
+"Honda","519","2016","Jul"
+"Honda","531","2016","Aug"
+"Honda","508","2016","Sep"
+"Honda","457","2016","Oct"
+"Honda","508","2016","Nov"
+"Honda","491","2016","Dec"
+"Hyundai","93","2015","Jan"
+"Hyundai","98","2015","Feb"
+"Hyundai","119","2015","Mar"
+"Hyundai","121","2015","Apr"
+"Hyundai","135","2015","May"
+"Hyundai","77","2015","Jun"
+"Hyundai","124","2015","Jul"
+"Hyundai","121","2015","Aug"
+"Hyundai","120","2015","Sep"
+"Hyundai","118","2015","Oct"
+"Hyundai","127","2015","Nov"
+"Hyundai","126","2015","Dec"
+"Hyundai","131","2016","Jan"
+"Hyundai","99","2016","Feb"
+"Hyundai","129","2016","Mar"
+"Hyundai","141","2016","Apr"
+"Hyundai","137","2016","May"
+"Hyundai","139","2016","Jun"
+"Hyundai","147","2016","Jul"
+"Hyundai","141","2016","Aug"
+"Hyundai","107","2016","Sep"
+"Hyundai","154","2016","Oct"
+"Hyundai","147","2016","Nov"
+"Hyundai","169","2016","Dec"
+"Infiniti","40","2015","Jan"
+"Infiniti","26","2015","Feb"
+"Infiniti","24","2015","Mar"
+"Infiniti","26","2015","Apr"
+"Infiniti","42","2015","May"
+"Infiniti","33","2015","Jun"
+"Infiniti","20","2015","Jul"
+"Infiniti","47","2015","Aug"
+"Infiniti","38","2015","Sep"
+"Infiniti","30","2015","Oct"
+"Infiniti","31","2015","Nov"
+"Infiniti","43","2015","Dec"
+"Infiniti","27","2016","Jan"
+"Infiniti","23","2016","Feb"
+"Infiniti","38","2016","Mar"
+"Infiniti","40","2016","Apr"
+"Infiniti","33","2016","May"
+"Infiniti","45","2016","Jun"
+"Infiniti","44","2016","Jul"
+"Infiniti","31","2016","Aug"
+"Infiniti","53","2016","Sep"
+"Infiniti","73","2016","Oct"
+"Infiniti","45","2016","Nov"
+"Infiniti","31","2016","Dec"
+"International Harvester/Navistar","68","2015","Jan"
+"International Harvester/Navistar","48","2015","Feb"
+"International Harvester/Navistar","65","2015","Mar"
+"International Harvester/Navistar","94","2015","Apr"
+"International Harvester/Navistar","110","2015","May"
+"International Harvester/Navistar","58","2015","Jun"
+"International Harvester/Navistar","78","2015","Jul"
+"International Harvester/Navistar","64","2015","Aug"
+"International Harvester/Navistar","74","2015","Sep"
+"International Harvester/Navistar","74","2015","Oct"
+"International Harvester/Navistar","82","2015","Nov"
+"International Harvester/Navistar","71","2015","Dec"
+"International Harvester/Navistar","52","2016","Jan"
+"International Harvester/Navistar","50","2016","Feb"
+"International Harvester/Navistar","40","2016","Mar"
+"International Harvester/Navistar","63","2016","Apr"
+"International Harvester/Navistar","45","2016","May"
+"International Harvester/Navistar","72","2016","Jun"
+"International Harvester/Navistar","57","2016","Jul"
+"International Harvester/Navistar","125","2016","Aug"
+"International Harvester/Navistar","81","2016","Sep"
+"International Harvester/Navistar","79","2016","Oct"
+"International Harvester/Navistar","59","2016","Nov"
+"International Harvester/Navistar","65","2016","Dec"
+"Isuzu","16","2015","Jan"
+"Isuzu","20","2015","Feb"
+"Isuzu","20","2015","Mar"
+"Isuzu","28","2015","Apr"
+"Isuzu","9","2015","May"
+"Isuzu","16","2015","Jun"
+"Isuzu","15","2015","Jul"
+"Isuzu","12","2015","Aug"
+"Isuzu","17","2015","Sep"
+"Isuzu","14","2015","Oct"
+"Isuzu","9","2015","Nov"
+"Isuzu","15","2015","Dec"
+"Isuzu","13","2016","Jan"
+"Isuzu","11","2016","Feb"
+"Isuzu","11","2016","Mar"
+"Isuzu","20","2016","Apr"
+"Isuzu","19","2016","May"
+"Isuzu","10","2016","Jun"
+"Isuzu","17","2016","Jul"
+"Isuzu","30","2016","Aug"
+"Isuzu","15","2016","Sep"
+"Isuzu","22","2016","Oct"
+"Isuzu","14","2016","Nov"
+"Isuzu","16","2016","Dec"
+"Jaguar","1","2015","Jan"
+"Jaguar","1","2015","Feb"
+"Jaguar","7","2015","Mar"
+"Jaguar","3","2015","Apr"
+"Jaguar","14","2015","May"
+"Jaguar","7","2015","Jun"
+"Jaguar","3","2015","Jul"
+"Jaguar","6","2015","Aug"
+"Jaguar","2","2015","Sep"
+"Jaguar","9","2015","Oct"
+"Jaguar","5","2015","Nov"
+"Jaguar","3","2015","Dec"
+"Jaguar","9","2016","Jan"
+"Jaguar","9","2016","Feb"
+"Jaguar","10","2016","Mar"
+"Jaguar","6","2016","Apr"
+"Jaguar","9","2016","May"
+"Jaguar","9","2016","Jun"
+"Jaguar","9","2016","Jul"
+"Jaguar","11","2016","Aug"
+"Jaguar","3","2016","Sep"
+"Jaguar","7","2016","Oct"
+"Jaguar","6","2016","Nov"
+"Jaguar","8","2016","Dec"
+"Jeep/Kaiser-Jeep/Willys Jeep","118","2015","Jan"
+"Jeep/Kaiser-Jeep/Willys Jeep","126","2015","Feb"
+"Jeep/Kaiser-Jeep/Willys Jeep","143","2015","Mar"
+"Jeep/Kaiser-Jeep/Willys Jeep","128","2015","Apr"
+"Jeep/Kaiser-Jeep/Willys Jeep","151","2015","May"
+"Jeep/Kaiser-Jeep/Willys Jeep","180","2015","Jun"
+"Jeep/Kaiser-Jeep/Willys Jeep","179","2015","Jul"
+"Jeep/Kaiser-Jeep/Willys Jeep","195","2015","Aug"
+"Jeep/Kaiser-Jeep/Willys Jeep","162","2015","Sep"
+"Jeep/Kaiser-Jeep/Willys Jeep","166","2015","Oct"
+"Jeep/Kaiser-Jeep/Willys Jeep","188","2015","Nov"
+"Jeep/Kaiser-Jeep/Willys Jeep","129","2015","Dec"
+"Jeep/Kaiser-Jeep/Willys Jeep","110","2016","Jan"
+"Jeep/Kaiser-Jeep/Willys Jeep","155","2016","Feb"
+"Jeep/Kaiser-Jeep/Willys Jeep","173","2016","Mar"
+"Jeep/Kaiser-Jeep/Willys Jeep","179","2016","Apr"
+"Jeep/Kaiser-Jeep/Willys Jeep","157","2016","May"
+"Jeep/Kaiser-Jeep/Willys Jeep","171","2016","Jun"
+"Jeep/Kaiser-Jeep/Willys Jeep","187","2016","Jul"
+"Jeep/Kaiser-Jeep/Willys Jeep","168","2016","Aug"
+"Jeep/Kaiser-Jeep/Willys Jeep","137","2016","Sep"
+"Jeep/Kaiser-Jeep/Willys Jeep","202","2016","Oct"
+"Jeep/Kaiser-Jeep/Willys Jeep","179","2016","Nov"
+"Jeep/Kaiser-Jeep/Willys Jeep","153","2016","Dec"
+"Kawasaki","16","2015","Jan"
+"Kawasaki","13","2015","Feb"
+"Kawasaki","34","2015","Mar"
+"Kawasaki","52","2015","Apr"
+"Kawasaki","63","2015","May"
+"Kawasaki","64","2015","Jun"
+"Kawasaki","69","2015","Jul"
+"Kawasaki","68","2015","Aug"
+"Kawasaki","67","2015","Sep"
+"Kawasaki","53","2015","Oct"
+"Kawasaki","27","2015","Nov"
+"Kawasaki","35","2015","Dec"
+"Kawasaki","12","2016","Jan"
+"Kawasaki","22","2016","Feb"
+"Kawasaki","35","2016","Mar"
+"Kawasaki","47","2016","Apr"
+"Kawasaki","61","2016","May"
+"Kawasaki","62","2016","Jun"
+"Kawasaki","80","2016","Jul"
+"Kawasaki","78","2016","Aug"
+"Kawasaki","79","2016","Sep"
+"Kawasaki","46","2016","Oct"
+"Kawasaki","45","2016","Nov"
+"Kawasaki","34","2016","Dec"
+"Kenworth","50","2015","Jan"
+"Kenworth","40","2015","Feb"
+"Kenworth","38","2015","Mar"
+"Kenworth","38","2015","Apr"
+"Kenworth","46","2015","May"
+"Kenworth","49","2015","Jun"
+"Kenworth","54","2015","Jul"
+"Kenworth","56","2015","Aug"
+"Kenworth","56","2015","Sep"
+"Kenworth","45","2015","Oct"
+"Kenworth","50","2015","Nov"
+"Kenworth","41","2015","Dec"
+"Kenworth","32","2016","Jan"
+"Kenworth","40","2016","Feb"
+"Kenworth","48","2016","Mar"
+"Kenworth","43","2016","Apr"
+"Kenworth","45","2016","May"
+"Kenworth","47","2016","Jun"
+"Kenworth","49","2016","Jul"
+"Kenworth","50","2016","Aug"
+"Kenworth","57","2016","Sep"
+"Kenworth","67","2016","Oct"
+"Kenworth","43","2016","Nov"
+"Kenworth","42","2016","Dec"
+"Kia","87","2015","Jan"
+"Kia","94","2015","Feb"
+"Kia","76","2015","Mar"
+"Kia","89","2015","Apr"
+"Kia","95","2015","May"
+"Kia","94","2015","Jun"
+"Kia","118","2015","Jul"
+"Kia","118","2015","Aug"
+"Kia","97","2015","Sep"
+"Kia","101","2015","Oct"
+"Kia","101","2015","Nov"
+"Kia","110","2015","Dec"
+"Kia","85","2016","Jan"
+"Kia","100","2016","Feb"
+"Kia","95","2016","Mar"
+"Kia","107","2016","Apr"
+"Kia","117","2016","May"
+"Kia","137","2016","Jun"
+"Kia","130","2016","Jul"
+"Kia","110","2016","Aug"
+"Kia","124","2016","Sep"
+"Kia","128","2016","Oct"
+"Kia","119","2016","Nov"
+"Kia","122","2016","Dec"
+"Land Rover","4","2015","Jan"
+"Land Rover","2","2015","Mar"
+"Land Rover","8","2015","Apr"
+"Land Rover","4","2015","May"
+"Land Rover","11","2015","Jun"
+"Land Rover","11","2015","Jul"
+"Land Rover","4","2015","Aug"
+"Land Rover","5","2015","Sep"
+"Land Rover","3","2015","Oct"
+"Land Rover","7","2015","Nov"
+"Land Rover","7","2015","Dec"
+"Land Rover","3","2016","Jan"
+"Land Rover","4","2016","Feb"
+"Land Rover","2","2016","Mar"
+"Land Rover","8","2016","Apr"
+"Land Rover","6","2016","May"
+"Land Rover","6","2016","Jun"
+"Land Rover","11","2016","Jul"
+"Land Rover","6","2016","Aug"
+"Land Rover","7","2016","Sep"
+"Land Rover","6","2016","Oct"
+"Land Rover","12","2016","Nov"
+"Land Rover","8","2016","Dec"
+"Lexus","45","2015","Jan"
+"Lexus","35","2015","Feb"
+"Lexus","27","2015","Mar"
+"Lexus","61","2015","Apr"
+"Lexus","55","2015","May"
+"Lexus","54","2015","Jun"
+"Lexus","71","2015","Jul"
+"Lexus","64","2015","Aug"
+"Lexus","52","2015","Sep"
+"Lexus","53","2015","Oct"
+"Lexus","46","2015","Nov"
+"Lexus","54","2015","Dec"
+"Lexus","62","2016","Jan"
+"Lexus","58","2016","Feb"
+"Lexus","47","2016","Mar"
+"Lexus","65","2016","Apr"
+"Lexus","54","2016","May"
+"Lexus","82","2016","Jun"
+"Lexus","47","2016","Jul"
+"Lexus","85","2016","Aug"
+"Lexus","53","2016","Sep"
+"Lexus","62","2016","Oct"
+"Lexus","41","2016","Nov"
+"Lexus","72","2016","Dec"
+"Lincoln","44","2015","Jan"
+"Lincoln","34","2015","Feb"
+"Lincoln","65","2015","Mar"
+"Lincoln","38","2015","Apr"
+"Lincoln","38","2015","May"
+"Lincoln","39","2015","Jun"
+"Lincoln","69","2015","Jul"
+"Lincoln","38","2015","Aug"
+"Lincoln","49","2015","Sep"
+"Lincoln","64","2015","Oct"
+"Lincoln","59","2015","Nov"
+"Lincoln","55","2015","Dec"
+"Lincoln","32","2016","Jan"
+"Lincoln","43","2016","Feb"
+"Lincoln","60","2016","Mar"
+"Lincoln","37","2016","Apr"
+"Lincoln","55","2016","May"
+"Lincoln","53","2016","Jun"
+"Lincoln","46","2016","Jul"
+"Lincoln","36","2016","Aug"
+"Lincoln","26","2016","Sep"
+"Lincoln","63","2016","Oct"
+"Lincoln","36","2016","Nov"
+"Lincoln","51","2016","Dec"
+"Mack","20","2015","Jan"
+"Mack","14","2015","Feb"
+"Mack","12","2015","Mar"
+"Mack","22","2015","Apr"
+"Mack","31","2015","May"
+"Mack","29","2015","Jun"
+"Mack","33","2015","Jul"
+"Mack","27","2015","Aug"
+"Mack","24","2015","Sep"
+"Mack","29","2015","Oct"
+"Mack","20","2015","Nov"
+"Mack","23","2015","Dec"
+"Mack","18","2016","Jan"
+"Mack","24","2016","Feb"
+"Mack","31","2016","Mar"
+"Mack","15","2016","Apr"
+"Mack","25","2016","May"
+"Mack","22","2016","Jun"
+"Mack","18","2016","Jul"
+"Mack","26","2016","Aug"
+"Mack","33","2016","Sep"
+"Mack","36","2016","Oct"
+"Mack","17","2016","Nov"
+"Mack","22","2016","Dec"
+"Mazda","51","2015","Jan"
+"Mazda","62","2015","Feb"
+"Mazda","61","2015","Mar"
+"Mazda","63","2015","Apr"
+"Mazda","82","2015","May"
+"Mazda","49","2015","Jun"
+"Mazda","67","2015","Jul"
+"Mazda","72","2015","Aug"
+"Mazda","79","2015","Sep"
+"Mazda","82","2015","Oct"
+"Mazda","55","2015","Nov"
+"Mazda","72","2015","Dec"
+"Mazda","58","2016","Jan"
+"Mazda","48","2016","Feb"
+"Mazda","59","2016","Mar"
+"Mazda","75","2016","Apr"
+"Mazda","81","2016","May"
+"Mazda","68","2016","Jun"
+"Mazda","63","2016","Jul"
+"Mazda","63","2016","Aug"
+"Mazda","85","2016","Sep"
+"Mazda","70","2016","Oct"
+"Mazda","81","2016","Nov"
+"Mazda","69","2016","Dec"
+"MCI","1","2015","Jan"
+"MCI","2","2015","Feb"
+"MCI","6","2015","Jun"
+"MCI","1","2015","Jul"
+"MCI","10","2015","Aug"
+"MCI","53","2015","Sep"
+"MCI","2","2015","Nov"
+"MCI","11","2015","Dec"
+"MCI","22","2016","Jan"
+"MCI","35","2016","Feb"
+"MCI","1","2016","Aug"
+"MCI","34","2016","Sep"
+"MCI","43","2016","Oct"
+"MCI","1","2016","Dec"
+"Mercedes-Benz","31","2015","Jan"
+"Mercedes-Benz","21","2015","Feb"
+"Mercedes-Benz","52","2015","Mar"
+"Mercedes-Benz","40","2015","Apr"
+"Mercedes-Benz","55","2015","May"
+"Mercedes-Benz","39","2015","Jun"
+"Mercedes-Benz","37","2015","Jul"
+"Mercedes-Benz","35","2015","Aug"
+"Mercedes-Benz","31","2015","Sep"
+"Mercedes-Benz","57","2015","Oct"
+"Mercedes-Benz","56","2015","Nov"
+"Mercedes-Benz","59","2015","Dec"
+"Mercedes-Benz","54","2016","Jan"
+"Mercedes-Benz","51","2016","Feb"
+"Mercedes-Benz","32","2016","Mar"
+"Mercedes-Benz","63","2016","Apr"
+"Mercedes-Benz","38","2016","May"
+"Mercedes-Benz","59","2016","Jun"
+"Mercedes-Benz","55","2016","Jul"
+"Mercedes-Benz","46","2016","Aug"
+"Mercedes-Benz","39","2016","Sep"
+"Mercedes-Benz","71","2016","Oct"
+"Mercedes-Benz","51","2016","Nov"
+"Mercedes-Benz","52","2016","Dec"
+"Mercury","69","2015","Jan"
+"Mercury","42","2015","Feb"
+"Mercury","61","2015","Mar"
+"Mercury","72","2015","Apr"
+"Mercury","75","2015","May"
+"Mercury","59","2015","Jun"
+"Mercury","58","2015","Jul"
+"Mercury","86","2015","Aug"
+"Mercury","55","2015","Sep"
+"Mercury","62","2015","Oct"
+"Mercury","77","2015","Nov"
+"Mercury","79","2015","Dec"
+"Mercury","58","2016","Jan"
+"Mercury","33","2016","Feb"
+"Mercury","58","2016","Mar"
+"Mercury","63","2016","Apr"
+"Mercury","57","2016","May"
+"Mercury","75","2016","Jun"
+"Mercury","70","2016","Jul"
+"Mercury","58","2016","Aug"
+"Mercury","60","2016","Sep"
+"Mercury","99","2016","Oct"
+"Mercury","61","2016","Nov"
+"Mercury","71","2016","Dec"
+"Mitsubishi","33","2015","Jan"
+"Mitsubishi","24","2015","Feb"
+"Mitsubishi","24","2015","Mar"
+"Mitsubishi","38","2015","Apr"
+"Mitsubishi","80","2015","May"
+"Mitsubishi","54","2015","Jun"
+"Mitsubishi","65","2015","Jul"
+"Mitsubishi","55","2015","Aug"
+"Mitsubishi","62","2015","Sep"
+"Mitsubishi","70","2015","Oct"
+"Mitsubishi","48","2015","Nov"
+"Mitsubishi","59","2015","Dec"
+"Mitsubishi","42","2016","Jan"
+"Mitsubishi","33","2016","Feb"
+"Mitsubishi","61","2016","Mar"
+"Mitsubishi","47","2016","Apr"
+"Mitsubishi","57","2016","May"
+"Mitsubishi","60","2016","Jun"
+"Mitsubishi","68","2016","Jul"
+"Mitsubishi","43","2016","Aug"
+"Mitsubishi","66","2016","Sep"
+"Mitsubishi","44","2016","Oct"
+"Mitsubishi","50","2016","Nov"
+"Mitsubishi","53","2016","Dec"
+"Moto Guzzi","3","2015","Jul"
+"Moto Guzzi","1","2015","Sep"
+"Moto Guzzi","1","2015","Nov"
+"Moto Guzzi","1","2015","Dec"
+"Moto Guzzi","1","2016","Jan"
+"Not Reported (Since 2010)","2","2015","Jan"
+"Not Reported (Since 2010)","1","2015","Mar"
+"Not Reported (Since 2010)","1","2015","Aug"
+"Not Reported (Since 2010)","2","2016","Apr"
+"Not Reported (Since 2010)","1","2016","Jul"
+"Not Reported (Since 2010)","1","2016","Nov"
+"Oldsmobile","23","2015","Jan"
+"Oldsmobile","37","2015","Feb"
+"Oldsmobile","38","2015","Mar"
+"Oldsmobile","36","2015","Apr"
+"Oldsmobile","30","2015","May"
+"Oldsmobile","27","2015","Jun"
+"Oldsmobile","26","2015","Jul"
+"Oldsmobile","39","2015","Aug"
+"Oldsmobile","33","2015","Sep"
+"Oldsmobile","24","2015","Oct"
+"Oldsmobile","38","2015","Nov"
+"Oldsmobile","17","2015","Dec"
+"Oldsmobile","33","2016","Jan"
+"Oldsmobile","36","2016","Feb"
+"Oldsmobile","39","2016","Mar"
+"Oldsmobile","18","2016","Apr"
+"Oldsmobile","35","2016","May"
+"Oldsmobile","19","2016","Jun"
+"Oldsmobile","22","2016","Jul"
+"Oldsmobile","31","2016","Aug"
+"Oldsmobile","41","2016","Sep"
+"Oldsmobile","34","2016","Oct"
+"Oldsmobile","38","2016","Nov"
+"Oldsmobile","36","2016","Dec"
+"Other Domestic
+Avanti
+Checker
+DeSoto
+Excalibur
+Hudson
+Packard
+Panoz
+Saleen
+Studebaker
+Stutz
+Tesla (Since 2014)","1","2015","Jan"
+"Other Domestic
+Avanti
+Checker
+DeSoto
+Excalibur
+Hudson
+Packard
+Panoz
+Saleen
+Studebaker
+Stutz
+Tesla (Since 2014)","2","2015","Jun"
+"Other Domestic
+Avanti
+Checker
+DeSoto
+Excalibur
+Hudson
+Packard
+Panoz
+Saleen
+Studebaker
+Stutz
+Tesla (Since 2014)","1","2015","Nov"
+"Other Domestic
+Avanti
+Checker
+DeSoto
+Excalibur
+Hudson
+Packard
+Panoz
+Saleen
+Studebaker
+Stutz
+Tesla (Since 2014)","3","2016","Apr"
+"Other Domestic
+Avanti
+Checker
+DeSoto
+Excalibur
+Hudson
+Packard
+Panoz
+Saleen
+Studebaker
+Stutz
+Tesla (Since 2014)","1","2016","May"
+"Other Domestic
+Avanti
+Checker
+DeSoto
+Excalibur
+Hudson
+Packard
+Panoz
+Saleen
+Studebaker
+Stutz
+Tesla (Since 2014)","2","2016","Jun"
+"Other Domestic
+Avanti
+Checker
+DeSoto
+Excalibur
+Hudson
+Packard
+Panoz
+Saleen
+Studebaker
+Stutz
+Tesla (Since 2014)","2","2016","Jul"
+"Other Domestic
+Avanti
+Checker
+DeSoto
+Excalibur
+Hudson
+Packard
+Panoz
+Saleen
+Studebaker
+Stutz
+Tesla (Since 2014)","3","2016","Aug"
+"Other Domestic
+Avanti
+Checker
+DeSoto
+Excalibur
+Hudson
+Packard
+Panoz
+Saleen
+Studebaker
+Stutz
+Tesla (Since 2014)","2","2016","Sep"
+"Other Domestic
+Avanti
+Checker
+DeSoto
+Excalibur
+Hudson
+Packard
+Panoz
+Saleen
+Studebaker
+Stutz
+Tesla (Since 2014)","2","2016","Oct"
+"Other Domestic
+Avanti
+Checker
+DeSoto
+Excalibur
+Hudson
+Packard
+Panoz
+Saleen
+Studebaker
+Stutz
+Tesla (Since 2014)","3","2016","Nov"
+"Other Domestic
+Avanti
+Checker
+DeSoto
+Excalibur
+Hudson
+Packard
+Panoz
+Saleen
+Studebaker
+Stutz
+Tesla (Since 2014)","1","2016","Dec"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","2","2015","Jan"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","5","2015","Feb"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","6","2015","Mar"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","5","2015","May"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","3","2015","Jun"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","4","2015","Jul"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","11","2015","Aug"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","3","2015","Sep"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","11","2015","Oct"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","5","2015","Nov"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","15","2015","Dec"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","4","2016","Jan"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","1","2016","Feb"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","3","2016","Mar"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","7","2016","Apr"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","5","2016","May"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","3","2016","Jun"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","5","2016","Jul"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","5","2016","Aug"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","13","2016","Sep"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","3","2016","Oct"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","14","2016","Nov"
+"Other Imports
+Aston Martin
+Bentley
+Bertone
+Bricklin
+Bugatti
+Caterham
+Citroen
+DeLorean
+Desta
+Ferrari
+Fisker
+Gazelle
+Hillman
+Jensen
+Koenigsegg
+Lada
+Lamborghini
+Lotus
+Mahindra (Since 2013)
+Maserati
+Maybach
+McLaren
+Mini Cooper
+Morgan
+Morris
+Reliant (British)
+Rolls-Royce
+Simca
+Singer
+Spyker
+Sunbeam
+TVR","5","2016","Dec"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","62","2015","Jan"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","52","2015","Feb"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","66","2015","Mar"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","100","2015","Apr"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","104","2015","May"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","100","2015","Jun"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","134","2015","Jul"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","136","2015","Aug"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","132","2015","Sep"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","180","2015","Oct"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","99","2015","Nov"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","92","2015","Dec"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","83","2016","Jan"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","101","2016","Feb"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","95","2016","Mar"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","101","2016","Apr"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","219","2016","May"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","119","2016","Jun"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","141","2016","Jul"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","197","2016","Aug"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","140","2016","Sep"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","169","2016","Oct"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","124","2016","Nov"
+"Other Make
+Auto-Union-DKW
+Carpenter
+Collins Bus
+DINA
+Divco
+Hino
+Mid Bus
+Neoplan
+Orion
+Oshkosh
+Scania
+Sterling
+UD
+Van Hool
+Western Star","124","2016","Dec"
+"Peterbilt","46","2015","Jan"
+"Peterbilt","32","2015","Feb"
+"Peterbilt","47","2015","Mar"
+"Peterbilt","44","2015","Apr"
+"Peterbilt","48","2015","May"
+"Peterbilt","49","2015","Jun"
+"Peterbilt","53","2015","Jul"
+"Peterbilt","59","2015","Aug"
+"Peterbilt","46","2015","Sep"
+"Peterbilt","70","2015","Oct"
+"Peterbilt","48","2015","Nov"
+"Peterbilt","67","2015","Dec"
+"Peterbilt","40","2016","Jan"
+"Peterbilt","36","2016","Feb"
+"Peterbilt","59","2016","Mar"
+"Peterbilt","55","2016","Apr"
+"Peterbilt","50","2016","May"
+"Peterbilt","51","2016","Jun"
+"Peterbilt","53","2016","Jul"
+"Peterbilt","78","2016","Aug"
+"Peterbilt","44","2016","Sep"
+"Peterbilt","58","2016","Oct"
+"Peterbilt","50","2016","Nov"
+"Peterbilt","53","2016","Dec"
+"Peugeot","1","2015","Dec"
+"Plymouth","12","2015","Jan"
+"Plymouth","4","2015","Feb"
+"Plymouth","10","2015","Mar"
+"Plymouth","14","2015","Apr"
+"Plymouth","13","2015","May"
+"Plymouth","4","2015","Jun"
+"Plymouth","4","2015","Jul"
+"Plymouth","6","2015","Aug"
+"Plymouth","9","2015","Sep"
+"Plymouth","10","2015","Oct"
+"Plymouth","11","2015","Nov"
+"Plymouth","9","2015","Dec"
+"Plymouth","3","2016","Jan"
+"Plymouth","8","2016","Feb"
+"Plymouth","8","2016","Mar"
+"Plymouth","5","2016","Apr"
+"Plymouth","17","2016","May"
+"Plymouth","12","2016","Jun"
+"Plymouth","14","2016","Jul"
+"Plymouth","5","2016","Aug"
+"Plymouth","6","2016","Sep"
+"Plymouth","8","2016","Oct"
+"Plymouth","13","2016","Nov"
+"Plymouth","3","2016","Dec"
+"Pontiac","100","2015","Jan"
+"Pontiac","75","2015","Feb"
+"Pontiac","97","2015","Mar"
+"Pontiac","110","2015","Apr"
+"Pontiac","112","2015","May"
+"Pontiac","98","2015","Jun"
+"Pontiac","109","2015","Jul"
+"Pontiac","121","2015","Aug"
+"Pontiac","86","2015","Sep"
+"Pontiac","132","2015","Oct"
+"Pontiac","103","2015","Nov"
+"Pontiac","117","2015","Dec"
+"Pontiac","104","2016","Jan"
+"Pontiac","101","2016","Feb"
+"Pontiac","116","2016","Mar"
+"Pontiac","140","2016","Apr"
+"Pontiac","110","2016","May"
+"Pontiac","85","2016","Jun"
+"Pontiac","99","2016","Jul"
+"Pontiac","97","2016","Aug"
+"Pontiac","135","2016","Sep"
+"Pontiac","104","2016","Oct"
+"Pontiac","99","2016","Nov"
+"Pontiac","99","2016","Dec"
+"Porsche","2","2015","Jan"
+"Porsche","6","2015","Feb"
+"Porsche","5","2015","Mar"
+"Porsche","2","2015","Apr"
+"Porsche","2","2015","May"
+"Porsche","3","2015","Jun"
+"Porsche","2","2015","Jul"
+"Porsche","6","2015","Aug"
+"Porsche","7","2015","Sep"
+"Porsche","4","2015","Oct"
+"Porsche","4","2015","Nov"
+"Porsche","8","2015","Dec"
+"Porsche","10","2016","Jan"
+"Porsche","3","2016","Feb"
+"Porsche","8","2016","Mar"
+"Porsche","3","2016","Apr"
+"Porsche","7","2016","May"
+"Porsche","7","2016","Jun"
+"Porsche","3","2016","Jul"
+"Porsche","6","2016","Sep"
+"Porsche","4","2016","Oct"
+"Porsche","4","2016","Nov"
+"Saab","1","2015","Jan"
+"Saab","2","2015","Feb"
+"Saab","6","2015","Mar"
+"Saab","2","2015","Apr"
+"Saab","7","2015","May"
+"Saab","5","2015","Jun"
+"Saab","7","2015","Jul"
+"Saab","3","2015","Aug"
+"Saab","3","2015","Sep"
+"Saab","1","2015","Oct"
+"Saab","4","2015","Nov"
+"Saab","4","2015","Dec"
+"Saab","4","2016","Jan"
+"Saab","5","2016","Feb"
+"Saab","5","2016","Mar"
+"Saab","7","2016","Apr"
+"Saab","5","2016","May"
+"Saab","2","2016","Jun"
+"Saab","5","2016","Aug"
+"Saab","1","2016","Sep"
+"Saab","4","2016","Oct"
+"Saab","6","2016","Nov"
+"Saab","2","2016","Dec"
+"Saturn","50","2015","Jan"
+"Saturn","41","2015","Feb"
+"Saturn","57","2015","Mar"
+"Saturn","23","2015","Apr"
+"Saturn","38","2015","May"
+"Saturn","54","2015","Jun"
+"Saturn","37","2015","Jul"
+"Saturn","58","2015","Aug"
+"Saturn","47","2015","Sep"
+"Saturn","63","2015","Oct"
+"Saturn","70","2015","Nov"
+"Saturn","51","2015","Dec"
+"Saturn","75","2016","Jan"
+"Saturn","51","2016","Feb"
+"Saturn","48","2016","Mar"
+"Saturn","50","2016","Apr"
+"Saturn","49","2016","May"
+"Saturn","49","2016","Jun"
+"Saturn","37","2016","Jul"
+"Saturn","69","2016","Aug"
+"Saturn","45","2016","Sep"
+"Saturn","56","2016","Oct"
+"Saturn","79","2016","Nov"
+"Saturn","77","2016","Dec"
+"Scion (Since 2012)","1","2015","Jan"
+"Scion (Since 2012)","7","2015","Feb"
+"Scion (Since 2012)","5","2015","Mar"
+"Scion (Since 2012)","4","2015","Apr"
+"Scion (Since 2012)","11","2015","May"
+"Scion (Since 2012)","2","2015","Jun"
+"Scion (Since 2012)","1","2015","Jul"
+"Scion (Since 2012)","5","2015","Aug"
+"Scion (Since 2012)","8","2015","Sep"
+"Scion (Since 2012)","3","2015","Oct"
+"Scion (Since 2012)","3","2015","Nov"
+"Scion (Since 2012)","9","2015","Dec"
+"Scion (Since 2012)","4","2016","Feb"
+"Scion (Since 2012)","17","2016","Mar"
+"Scion (Since 2012)","2","2016","Apr"
+"Scion (Since 2012)","12","2016","May"
+"Scion (Since 2012)","14","2016","Jun"
+"Scion (Since 2012)","2","2016","Jul"
+"Scion (Since 2012)","4","2016","Aug"
+"Scion (Since 2012)","10","2016","Sep"
+"Scion (Since 2012)","8","2016","Oct"
+"Scion (Since 2012)","11","2016","Nov"
+"Scion (Since 2012)","4","2016","Dec"
+"Smart (Since 2010)","1","2015","Jan"
+"Smart (Since 2010)","1","2015","Jul"
+"Smart (Since 2010)","1","2015","Aug"
+"Smart (Since 2010)","1","2015","Sep"
+"Smart (Since 2010)","3","2015","Oct"
+"Smart (Since 2010)","1","2015","Nov"
+"Smart (Since 2010)","2","2016","Feb"
+"Smart (Since 2010)","1","2016","Apr"
+"Smart (Since 2010)","2","2016","May"
+"Smart (Since 2010)","1","2016","Sep"
+"Smart (Since 2010)","1","2016","Dec"
+"Subaru","45","2015","Jan"
+"Subaru","43","2015","Feb"
+"Subaru","70","2015","Mar"
+"Subaru","47","2015","Apr"
+"Subaru","51","2015","May"
+"Subaru","69","2015","Jun"
+"Subaru","72","2015","Jul"
+"Subaru","71","2015","Aug"
+"Subaru","57","2015","Sep"
+"Subaru","48","2015","Oct"
+"Subaru","40","2015","Nov"
+"Subaru","46","2015","Dec"
+"Subaru","65","2016","Jan"
+"Subaru","47","2016","Feb"
+"Subaru","46","2016","Mar"
+"Subaru","33","2016","Apr"
+"Subaru","40","2016","May"
+"Subaru","51","2016","Jun"
+"Subaru","54","2016","Jul"
+"Subaru","57","2016","Aug"
+"Subaru","48","2016","Sep"
+"Subaru","49","2016","Oct"
+"Subaru","73","2016","Nov"
+"Subaru","47","2016","Dec"
+"Suzuki","42","2015","Jan"
+"Suzuki","42","2015","Feb"
+"Suzuki","73","2015","Mar"
+"Suzuki","73","2015","Apr"
+"Suzuki","90","2015","May"
+"Suzuki","114","2015","Jun"
+"Suzuki","129","2015","Jul"
+"Suzuki","118","2015","Aug"
+"Suzuki","99","2015","Sep"
+"Suzuki","86","2015","Oct"
+"Suzuki","66","2015","Nov"
+"Suzuki","67","2015","Dec"
+"Suzuki","32","2016","Jan"
+"Suzuki","52","2016","Feb"
+"Suzuki","62","2016","Mar"
+"Suzuki","80","2016","Apr"
+"Suzuki","106","2016","May"
+"Suzuki","89","2016","Jun"
+"Suzuki","104","2016","Jul"
+"Suzuki","97","2016","Aug"
+"Suzuki","100","2016","Sep"
+"Suzuki","91","2016","Oct"
+"Suzuki","61","2016","Nov"
+"Suzuki","38","2016","Dec"
+"Thomas Built","2","2015","Jan"
+"Thomas Built","10","2015","Feb"
+"Thomas Built","6","2015","Apr"
+"Thomas Built","4","2015","May"
+"Thomas Built","3","2015","Jun"
+"Thomas Built","21","2015","Sep"
+"Thomas Built","31","2015","Oct"
+"Thomas Built","1","2015","Nov"
+"Thomas Built","1","2016","Mar"
+"Thomas Built","2","2016","Apr"
+"Thomas Built","1","2016","May"
+"Thomas Built","1","2016","Jun"
+"Thomas Built","2","2016","Jul"
+"Thomas Built","9","2016","Aug"
+"Thomas Built","1","2016","Sep"
+"Thomas Built","8","2016","Oct"
+"Thomas Built","39","2016","Nov"
+"Thomas Built","1","2016","Dec"
+"Toyota","434","2015","Jan"
+"Toyota","384","2015","Feb"
+"Toyota","391","2015","Mar"
+"Toyota","413","2015","Apr"
+"Toyota","471","2015","May"
+"Toyota","515","2015","Jun"
+"Toyota","654","2015","Jul"
+"Toyota","569","2015","Aug"
+"Toyota","460","2015","Sep"
+"Toyota","588","2015","Oct"
+"Toyota","575","2015","Nov"
+"Toyota","535","2015","Dec"
+"Toyota","415","2016","Jan"
+"Toyota","437","2016","Feb"
+"Toyota","537","2016","Mar"
+"Toyota","487","2016","Apr"
+"Toyota","557","2016","May"
+"Toyota","580","2016","Jun"
+"Toyota","565","2016","Jul"
+"Toyota","563","2016","Aug"
+"Toyota","534","2016","Sep"
+"Toyota","625","2016","Oct"
+"Toyota","551","2016","Nov"
+"Toyota","607","2016","Dec"
+"Triumph","2","2015","Jan"
+"Triumph","4","2015","Feb"
+"Triumph","2","2015","Mar"
+"Triumph","2","2015","Apr"
+"Triumph","4","2015","May"
+"Triumph","4","2015","Jun"
+"Triumph","7","2015","Jul"
+"Triumph","14","2015","Aug"
+"Triumph","9","2015","Sep"
+"Triumph","4","2015","Oct"
+"Triumph","5","2015","Nov"
+"Triumph","5","2015","Dec"
+"Triumph","6","2016","Jan"
+"Triumph","2","2016","Feb"
+"Triumph","3","2016","Mar"
+"Triumph","9","2016","Apr"
+"Triumph","6","2016","May"
+"Triumph","2","2016","Jun"
+"Triumph","12","2016","Jul"
+"Triumph","4","2016","Aug"
+"Triumph","10","2016","Sep"
+"Triumph","7","2016","Oct"
+"Triumph","4","2016","Nov"
+"Triumph","3","2016","Dec"
+"Unknown Make","72","2015","Jan"
+"Unknown Make","61","2015","Feb"
+"Unknown Make","56","2015","Mar"
+"Unknown Make","74","2015","Apr"
+"Unknown Make","70","2015","May"
+"Unknown Make","121","2015","Jun"
+"Unknown Make","82","2015","Jul"
+"Unknown Make","85","2015","Aug"
+"Unknown Make","102","2015","Sep"
+"Unknown Make","105","2015","Oct"
+"Unknown Make","79","2015","Nov"
+"Unknown Make","151","2015","Dec"
+"Unknown Make","76","2016","Jan"
+"Unknown Make","79","2016","Feb"
+"Unknown Make","76","2016","Mar"
+"Unknown Make","81","2016","Apr"
+"Unknown Make","75","2016","May"
+"Unknown Make","85","2016","Jun"
+"Unknown Make","90","2016","Jul"
+"Unknown Make","99","2016","Aug"
+"Unknown Make","104","2016","Sep"
+"Unknown Make","88","2016","Oct"
+"Unknown Make","91","2016","Nov"
+"Unknown Make","112","2016","Dec"
+"Victory","3","2015","Jan"
+"Victory","3","2015","Feb"
+"Victory","3","2015","Mar"
+"Victory","5","2015","Apr"
+"Victory","3","2015","May"
+"Victory","4","2015","Jun"
+"Victory","5","2015","Jul"
+"Victory","2","2015","Aug"
+"Victory","8","2015","Sep"
+"Victory","1","2015","Oct"
+"Victory","3","2015","Nov"
+"Victory","1","2015","Dec"
+"Victory","3","2016","Mar"
+"Victory","4","2016","Apr"
+"Victory","8","2016","May"
+"Victory","6","2016","Jun"
+"Victory","5","2016","Jul"
+"Victory","8","2016","Aug"
+"Victory","6","2016","Sep"
+"Victory","4","2016","Oct"
+"Victory","1","2016","Nov"
+"Victory","1","2016","Dec"
+"Volkswagen","71","2015","Jan"
+"Volkswagen","34","2015","Feb"
+"Volkswagen","60","2015","Mar"
+"Volkswagen","73","2015","Apr"
+"Volkswagen","61","2015","May"
+"Volkswagen","81","2015","Jun"
+"Volkswagen","76","2015","Jul"
+"Volkswagen","94","2015","Aug"
+"Volkswagen","43","2015","Sep"
+"Volkswagen","59","2015","Oct"
+"Volkswagen","95","2015","Nov"
+"Volkswagen","58","2015","Dec"
+"Volkswagen","57","2016","Jan"
+"Volkswagen","58","2016","Feb"
+"Volkswagen","57","2016","Mar"
+"Volkswagen","40","2016","Apr"
+"Volkswagen","84","2016","May"
+"Volkswagen","62","2016","Jun"
+"Volkswagen","68","2016","Jul"
+"Volkswagen","78","2016","Aug"
+"Volkswagen","85","2016","Sep"
+"Volkswagen","65","2016","Oct"
+"Volkswagen","61","2016","Nov"
+"Volkswagen","77","2016","Dec"
+"Volvo","45","2015","Jan"
+"Volvo","51","2015","Feb"
+"Volvo","62","2015","Mar"
+"Volvo","35","2015","Apr"
+"Volvo","51","2015","May"
+"Volvo","63","2015","Jun"
+"Volvo","58","2015","Jul"
+"Volvo","50","2015","Aug"
+"Volvo","73","2015","Sep"
+"Volvo","58","2015","Oct"
+"Volvo","50","2015","Nov"
+"Volvo","51","2015","Dec"
+"Volvo","52","2016","Jan"
+"Volvo","44","2016","Feb"
+"Volvo","45","2016","Mar"
+"Volvo","55","2016","Apr"
+"Volvo","57","2016","May"
+"Volvo","69","2016","Jun"
+"Volvo","62","2016","Jul"
+"Volvo","52","2016","Aug"
+"Volvo","61","2016","Sep"
+"Volvo","52","2016","Oct"
+"Volvo","58","2016","Nov"
+"Volvo","73","2016","Dec"
+"White/Autocar, White/GMC","1","2015","Feb"
+"White/Autocar, White/GMC","2","2015","Mar"
+"White/Autocar, White/GMC","3","2015","May"
+"White/Autocar, White/GMC","1","2015","Jun"
+"White/Autocar, White/GMC","1","2015","Jul"
+"White/Autocar, White/GMC","2","2015","Aug"
+"White/Autocar, White/GMC","2","2015","Oct"
+"White/Autocar, White/GMC","1","2015","Dec"
+"White/Autocar, White/GMC","1","2016","Feb"
+"White/Autocar, White/GMC","1","2016","Mar"
+"White/Autocar, White/GMC","2","2016","Apr"
+"White/Autocar, White/GMC","1","2016","May"
+"White/Autocar, White/GMC","1","2016","Jun"
+"White/Autocar, White/GMC","15","2016","Jul"
+"White/Autocar, White/GMC","3","2016","Sep"
+"White/Autocar, White/GMC","6","2016","Oct"
+"White/Autocar, White/GMC","4","2016","Nov"
+"Yamaha","21","2015","Jan"
+"Yamaha","24","2015","Feb"
+"Yamaha","49","2015","Mar"
+"Yamaha","80","2015","Apr"
+"Yamaha","104","2015","May"
+"Yamaha","72","2015","Jun"
+"Yamaha","117","2015","Jul"
+"Yamaha","95","2015","Aug"
+"Yamaha","75","2015","Sep"
+"Yamaha","72","2015","Oct"
+"Yamaha","53","2015","Nov"
+"Yamaha","38","2015","Dec"
+"Yamaha","27","2016","Jan"
+"Yamaha","34","2016","Feb"
+"Yamaha","60","2016","Mar"
+"Yamaha","61","2016","Apr"
+"Yamaha","84","2016","May"
+"Yamaha","99","2016","Jun"
+"Yamaha","94","2016","Jul"
+"Yamaha","95","2016","Aug"
+"Yamaha","74","2016","Sep"
+"Yamaha","89","2016","Oct"
+"Yamaha","45","2016","Nov"
+"Yamaha","28","2016","Dec"
