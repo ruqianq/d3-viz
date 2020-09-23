@@ -105,4 +105,6 @@ function update(data) {
     .attr("y", d => y(d.Frequency))
     .attr("height", d => HEIGHT - y(d.Frequency))
 
+  const text = flag ? "2015" : "2016"
+  yLabel.text(text)
 }
