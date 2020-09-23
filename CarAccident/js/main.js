@@ -59,6 +59,17 @@ g.append("g")
 
 d3.csv("data/vehicle_accidents.csv").then(data => {
   data.forEach(d => d.Frequency = Number(d.Frequency))
+
+  let allModels = [...new Set(data.map(d => d.vehicle_make_name))]
+
+  d3.select("#selectButton")
+    .selectAll('myOption')
+    .data(allModels)
+    .enter()
+    .append('option')
+    .text(function (d) { return d; }) // text showed in the menu
+    .attr("value", function (d) { return d; })
+
   let testData = data.filter((d) => {
     return d.vehicle_make_name === "Acura" && d.sas_yr_of_crsh === "2015"
   })
