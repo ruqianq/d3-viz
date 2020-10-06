@@ -14,5 +14,7 @@ var x = d3.scaleBand().range([0, width]);
 var y = d3.scaleLinear().range([height, 0]);
 
 d3.csv("data/sas_test_data.csv").then(function(data) {
-
+  data.forEach(d => {
+    d.Frequency = parseInt(d.Frequency.replace(/,/g, ''))
+  })
 })
