@@ -65,8 +65,19 @@ d3.csv("data/sas_test_data.csv", function(data) {
         .attr("width", 200)
         .attr("height", 50);
       let currentYear = d.year
+      const xTip = d3.scaleBand().range([0, 200]).domain(data.map(d => d.sas_mnth_of_crsh));
+      const yTip = d3.scaleLinear()
+        .domain([0, d3.max(data, d => d.Frequency)])
+        .range([height, 0])
       tipSVG.append("path")
         .datum(data.filter(function(d) {return d.sas_yr_of_crsh === currentYear}))
+        .attr("fill", "none")
+        .attr("stroke", "steelblue")
+        .attr("stroke-width", 1.5)
+        .attr("d", d3.line()
+          .x(function(d) { return xTip(d.sas_mnth_of_crsh) })
+          .y(function(d) { return yTip(d.Frequency) })
+        )
     })
     .on('mouseout', tool_tip.hide);
 })
