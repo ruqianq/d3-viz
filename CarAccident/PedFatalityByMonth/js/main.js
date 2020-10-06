@@ -16,7 +16,7 @@ var y = d3.scaleBand().range([height, 0])
   .paddingOuter(0.2);
 
 const div = d3.select('#chart-area').append('div')
-  .attr("class", "tooltip-donut")
+  .attr("class", "tooltip")
   .style("opacity", 0);
 
 d3.csv("data/sas_test_data.csv").then(function(data) {
@@ -55,22 +55,15 @@ d3.csv("data/sas_test_data.csv").then(function(data) {
     .attr('height', y.bandwidth)
     .attr('width', d => x(d.number))
     .attr('fill', 'red')
-    .on('mouseover', function (d, i) {
-      d3.select(this).transition()
-        .duration('50')
-        .attr('opacity', '.85');
-      //Makes the new div appear on hover:
+    .on("mouseover", function(d) {
       div.transition()
-        .duration(50)
-        .style("opacity", 1);
-    })
-    .on('mouseout', function (d, i) {
-      d3.select(this).transition()
-        .duration('50')
-        .attr('opacity', '1');
-      //Makes the new div disappear:
-      div.transition()
-        .duration('50')
-        .style("opacity", 0);
+        .duration(200)
+        .style("opacity", .9);
+      div .html(
+        '<a href= "http://google.com">' + // The first <a> tag
+        "</a>" +                          // closing </a> tag
+        "<br/>"  + d.number)
+        .style("left", (d3.event.pageX) + "px")
+        .style("top", (d3.event.pageY - 28) + "px");
     });
 })
