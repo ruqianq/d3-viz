@@ -1,6 +1,6 @@
-const margin = {top: 20, right: 20, bottom: 30, left: 50},
-      width = 960 - margin.left - margin.right,
-      height = 500 - margin.top - margin.bottom;
+const margin = {top: 10, right: 10, bottom: 130, left: 100},
+      width = 600 - margin.left - margin.right,
+      height = 400 - margin.top - margin.bottom;
 
 const svg = d3.select('#chart-area').append('svg')
   .attr('width', width + margin.left + margin.right)
@@ -11,33 +11,44 @@ const g = svg.append('g')
 
 // set the ranges
 var x = d3.scaleLinear().range([0, width]);
-var y = d3.scaleBand().range([height, 0]).paddingInner(0.3)
+var y = d3.scaleBand().range([height, 0])
+  .paddingInner(0.3)
   .paddingOuter(0.2);
 
 d3.csv("data/sas_test_data.csv").then(function(data) {
   data.forEach(d => {
     d.Frequency = parseInt(d.Frequency.replace(/,/g, ''))
   })
-  let result = []
-  let yearSum = 0;
-  let p = 0;
-  while (p < data.length - 1) {
-    if (data[p].sas_yr_of_crsh !== data[p+1].sas_yr_of_crsh) {
+  const sumOf2015 = data.filter(d => d.sas_yr_of_crsh === "2015").reduce((a, b) => {
+    a += b.Frequency
+    return a
+  }, 0)
 
+  const sumOf2016 = data.filter(d => d.sas_yr_of_crsh === "2016").reduce((a, b) => {
+    a += b.Frequency
+    return a
+  }, 0)
+
+  const sum = [
+    {
+      "year": "2015",
+      "number": sumOf2015
+    },
+    {
+      "year": "2016",
+      "number": sumOf2016
     }
-    yearSum += data[p].Frequency
-  }
+  ];
 
+  y.domain(sum.map(d => d.year))
+  x.domain([0, d3.max(sum, d => d.number)])
 
-  y.domain(data.map(d => d.sas_yr_of_crsh))
-  x.domain([0, d3.max(data, d => d.Frequency)])
-
-  const rects = g.selectAll("rect").data(data)
+  const rects = g.selectAll("rect").data(sum)
 
   rects.enter().append('rect')
-    .attr('x', (d) => x(d.Frequency))
-    .attr('y', (d) => y(d.sas_yr_of_crsh))
-    .attr('width', y.bandwidth)
-    .attr('height', (d) => width - x(d.Frequency))
+    .attr('x', 0)
+    .attr('y', (d) => y(d.year))
+    .attr('height', y.bandwidth)
+    .attr('width', d => x(d.number))
     .attr('fill', 'red')
 })
