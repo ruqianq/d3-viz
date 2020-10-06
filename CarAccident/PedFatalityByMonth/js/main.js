@@ -15,6 +15,10 @@ var y = d3.scaleBand().range([height, 0])
   .paddingInner(0.3)
   .paddingOuter(0.2);
 
+const div = d3.select('#chart-area').append('div')
+  .attr("class", "tooltip-donut")
+  .style("opacity", 0);
+
 d3.csv("data/sas_test_data.csv").then(function(data) {
   data.forEach(d => {
     d.Frequency = parseInt(d.Frequency.replace(/,/g, ''))
@@ -51,4 +55,22 @@ d3.csv("data/sas_test_data.csv").then(function(data) {
     .attr('height', y.bandwidth)
     .attr('width', d => x(d.number))
     .attr('fill', 'red')
+    .on('mouseover', function (d, i) {
+      d3.select(this).transition()
+        .duration('50')
+        .attr('opacity', '.85');
+      //Makes the new div appear on hover:
+      div.transition()
+        .duration(50)
+        .style("opacity", 1);
+    })
+    .on('mouseout', function (d, i) {
+      d3.select(this).transition()
+        .duration('50')
+        .attr('opacity', '1');
+      //Makes the new div disappear:
+      div.transition()
+        .duration('50')
+        .style("opacity", 0);
+    });
 })
