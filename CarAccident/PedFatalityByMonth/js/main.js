@@ -18,6 +18,16 @@ d3.csv("data/sas_test_data.csv").then(function(data) {
   data.forEach(d => {
     d.Frequency = parseInt(d.Frequency.replace(/,/g, ''))
   })
+  let result = []
+  let yearSum = 0;
+  let p = 0;
+  while (p < data.length - 1) {
+    if (data[p].sas_yr_of_crsh !== data[p+1].sas_yr_of_crsh) {
+
+    }
+    yearSum += data[p].Frequency
+  }
+
 
   y.domain(data.map(d => d.sas_yr_of_crsh))
   x.domain([0, d3.max(data, d => d.Frequency)])
