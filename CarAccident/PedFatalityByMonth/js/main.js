@@ -1,6 +1,6 @@
 const margin = {top: 10, right: 10, bottom: 130, left: 100},
-      width = 600 - margin.left - margin.right,
-      height = 400 - margin.top - margin.bottom;
+  width = 600 - margin.left - margin.right,
+  height = 400 - margin.top - margin.bottom;
 
 const svg = d3.select('#chart-area').append('svg')
   .attr('width', width + margin.left + margin.right)
@@ -22,7 +22,7 @@ const tool_tip = d3.tip()
 
 svg.call(tool_tip);
 
-d3.csv("data/sas_test_data.csv", function(data) {
+d3.csv("data/sas_test_data.csv", function (data) {
   data.forEach(d => {
     d.Frequency = parseInt(d.Frequency.replace(/,/g, ''))
   })
@@ -58,7 +58,7 @@ d3.csv("data/sas_test_data.csv", function(data) {
     .attr('height', y.bandwidth)
     .attr('width', d => x(d.number))
     .attr('fill', 'red')
-    .on('mouseover', function(d) {
+    .on('mouseover', function (d) {
       tool_tip.show();
       var tipSVG = d3.select("#tipDiv")
         .append("svg")
@@ -70,13 +70,19 @@ d3.csv("data/sas_test_data.csv", function(data) {
         .domain([0, d3.max(data, d => d.Frequency)])
         .range([height, 0])
       tipSVG.append("path")
-        .datum(data.filter(function(d) {return d.sas_yr_of_crsh === currentYear}))
+        .datum(data.filter(function (d) {
+          return d.sas_yr_of_crsh === currentYear
+        }))
         .attr("fill", "none")
         .attr("stroke", "steelblue")
         .attr("stroke-width", 1.5)
         .attr("d", d3.line()
-          .x(function(d) { return xTip(d.sas_mnth_of_crsh) })
-          .y(function(d) { return yTip(d.Frequency) })
+          .x(function (d) {
+            return xTip(d.sas_mnth_of_crsh)
+          })
+          .y(function (d) {
+            return yTip(d.Frequency)
+          })
         )
     })
     .on('mouseout', tool_tip.hide);
