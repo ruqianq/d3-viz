@@ -10,16 +10,15 @@ const g = svg.append('g')
   .attr("transform", `translate(${margin.left}, ${margin.top})`)
 
 // set the ranges
-var x = d3.scaleLinear().range([0, width]);
-var y = d3.scaleBand().range([height, 0])
+const x = d3.scaleLinear().range([0, width]);
+const y = d3.scaleBand().range([height, 0])
   .paddingInner(0.3)
   .paddingOuter(0.2);
 
 // Tooltip
 const tool_tip = d3.tip()
   .attr("class", "d3-tip")
-  .offset([20, 120])
-  .html("<p>This is a SVG inside a tooltip:</p><div id='tipDiv'></div>");
+  .html("<div id='tipDiv'></div>");
 
 svg.call(tool_tip);
 
@@ -63,18 +62,21 @@ d3.csv("data/sas_test_data.csv", function (data) {
     .attr('y', (d) => y(d.year))
     .attr('height', y.bandwidth)
     .attr('width', d => x(d.number))
-    .attr('fill', 'red')
+    .attr('fill', '#69b3a2')
     .on('mouseover', function (d) {
       tool_tip.show();
       var tipSVG = d3.select("#tipDiv")
         .append("svg")
-        .attr("width", 200)
-        .attr("height", 50);
+        .attr("width", 220)
+        .attr("height", 55);
       let currentYear = d.year
-      const xTip = d3.scaleBand().range([0, 200]).domain(data.map(d => d.sas_mnth_of_crsh));
+      const xTip = d3.scaleBand()
+        .domain(data.map(d => d.sas_mnth_of_crsh)).
+        range([0, 130]);
       const yTip = d3.scaleLinear()
-        .domain([0, d3.max(data, d => d.Frequency)])
-        .range([height, 0])
+        .domain([d3.min(data, d => d.Frequency), d3.max(data, d => d.Frequency)])
+        .range([50, 0])
+
       tipSVG.append("path")
         .datum(data.filter(function (d) {
           return d.sas_yr_of_crsh === currentYear
@@ -90,9 +92,10 @@ d3.csv("data/sas_test_data.csv", function (data) {
             return yTip(d.Frequency)
           })
         )
+      tipSVG.append("g").attr("transform", "translate(0," + 55 + ")")
+        .call(d3.axisBottom(xTip));
+      tipSVG.append("g")
+        .call(d3.axisLeft(y));
     })
     .on('mouseout', tool_tip.hide);
-
-
-
 })
