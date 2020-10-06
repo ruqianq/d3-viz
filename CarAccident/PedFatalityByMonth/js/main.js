@@ -68,7 +68,7 @@ d3.csv("data/sas_test_data.csv", function (data) {
       var tipSVG = d3.select("#tipDiv")
         .append("svg")
         .attr("width", 220)
-        .attr("height", 55);
+        .attr("height", 80);
       let currentYear = d.year
       const xTip = d3.scaleBand()
         .domain(data.map(d => d.sas_mnth_of_crsh)).
@@ -92,8 +92,10 @@ d3.csv("data/sas_test_data.csv", function (data) {
             return yTip(d.Frequency)
           })
         )
-      tipSVG.append("g").attr("transform", "translate(0," + 55 + ")")
-        .call(d3.axisBottom(xTip));
+      tipSVG.append("g").attr("transform", "translate(0," + 50 + ")")
+        .call(d3.axisBottom(xTip)).selectAll("text")
+        .attr("transform", "translate(-10,0)rotate(-90)")
+        .style("text-anchor", "end");
       tipSVG.append("g")
         .call(d3.axisLeft(y));
     })
