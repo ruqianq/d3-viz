@@ -15,11 +15,14 @@ var y = d3.scaleBand().range([height, 0])
   .paddingInner(0.3)
   .paddingOuter(0.2);
 
-const div = d3.select('#chart-area').append('div')
-  .attr("class", "tooltip")
-  .style("opacity", 0);
+const tool_tip = d3.tip()
+  .attr("class", "d3-tip")
+  .offset([20, 120])
+  .html("<p>This is a SVG inside a tooltip:</p><div id='tipDiv'></div>");
 
-d3.csv("data/sas_test_data.csv").then(function(data) {
+svg.call(tool_tip);
+
+d3.csv("data/sas_test_data.csv", function(data) {
   data.forEach(d => {
     d.Frequency = parseInt(d.Frequency.replace(/,/g, ''))
   })
@@ -55,15 +58,15 @@ d3.csv("data/sas_test_data.csv").then(function(data) {
     .attr('height', y.bandwidth)
     .attr('width', d => x(d.number))
     .attr('fill', 'red')
-    .on("mouseover", function(d) {
-      div.transition()
-        .duration(200)
-        .style("opacity", .9);
-      div .html(
-        '<a href= "http://google.com">' + // The first <a> tag
-        "</a>" +                          // closing </a> tag
-        "<br/>"  + d.number)
-        .style("left", (d3.event.pageX) + "px")
-        .style("top", (d3.event.pageY - 28) + "px");
-    });
+    .on('mouseover', function(d) {
+      tool_tip.show();
+      var tipSVG = d3.select("#tipDiv")
+        .append("svg")
+        .attr("width", 200)
+        .attr("height", 50);
+      let currentYear = d.year
+      tipSVG.append("path")
+        .datum(data.filter(function(d) {return d.sas_yr_of_crsh === currentYear}))
+    })
+    .on('mouseout', tool_tip.hide);
 })
