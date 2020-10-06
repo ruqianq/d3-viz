@@ -15,6 +15,7 @@ var y = d3.scaleBand().range([height, 0])
   .paddingInner(0.3)
   .paddingOuter(0.2);
 
+// Tooltip
 const tool_tip = d3.tip()
   .attr("class", "d3-tip")
   .offset([20, 120])
@@ -52,6 +53,11 @@ d3.csv("data/sas_test_data.csv", function (data) {
 
   const rects = g.selectAll("rect").data(sum)
 
+  g.call(d3.axisBottom(x))
+  g.call(d3.axisLeft(y)).selectAll("text")
+    .attr("transform", "translate(-10,0)rotate(-45)")
+    .style("text-anchor", "end");
+
   rects.enter().append('rect')
     .attr('x', 0)
     .attr('y', (d) => y(d.year))
@@ -86,4 +92,7 @@ d3.csv("data/sas_test_data.csv", function (data) {
         )
     })
     .on('mouseout', tool_tip.hide);
+
+
+
 })
