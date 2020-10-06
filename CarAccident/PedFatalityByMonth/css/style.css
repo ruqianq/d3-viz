@@ -3,15 +3,3 @@
 	margin-right: auto;
 	display: block;
 }
-
-.d3-tip {
-	line-height: 1;
-	padding: 6px;
-	background: wheat;
-	border-radius: 4px;
-	font-size: 12px;
-}
-
-p {
-	font-family: Helvetica, serif;
-}
