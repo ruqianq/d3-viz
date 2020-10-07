@@ -15,4 +15,41 @@ const y = d3.scaleBand().range([height, 0])
   .paddingInner(0.3)
   .paddingOuter(0.2);
 
+d3.csv("data/sas_test_data.csv", (dataForChart) => {
+  dataForChart.forEach(d => {
+    d.Frequency = parseInt(d.Frequency.replace(/,/g, ''))
+  })
+  let yearlyTotal = 0;
+  let p = 0;
+  let result = [];
+  let months = [];
+  let year = {}
+  let month = {}
 
+  while (p < dataForChart.length - 1) {
+    month["number"] = dataForChart[p].Frequency
+    month["month"] = dataForChart[p].sas_mnth_of_crsh
+    months.push(month)
+    yearlyTotal += dataForChart[p].Frequency
+    if (dataForChart[p].sas_yr_of_crsh !== dataForChart[p + 1].sas_yr_of_crsh){
+      year["year"] = dataForChart[p].sas_yr_of_crsh
+      year["total"] = yearlyTotal
+      year["months"] = months
+      result.push(year)
+
+      yearlyTotal = 0
+      months = [];
+      year = {}
+    }
+    p++
+  }
+  year["year"] = dataForChart[p].sas_yr_of_crsh
+  year["total"] = yearlyTotal
+  month["number"] = dataForChart[p].Frequency
+  month["month"] = dataForChart[p].sas_mnth_of_crsh
+  months.push(month)
+  year["months"] = months
+  result.push(year)
+
+
+})
