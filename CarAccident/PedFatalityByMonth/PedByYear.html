@@ -60,8 +60,29 @@
 
              if ( !dataForChart.length )	return;
 
-	         // Define the size of the SVG container for the graph to be created in
+             dataForChart.forEach(d => {
+				d.Frequency = parseInt(d.Frequency.replace(/,/g, ''))
+			})
+			const sumOf2015 = dataForChart.filter(d => d.sas_yr_of_crsh === "2015").reduce((a, b) => {
+				a += b.Frequency
+				return a
+			}, 0)
 
+			const sumOf2016 = dataForChart.filter(d => d.sas_yr_of_crsh === "2016").reduce((a, b) => {
+				a += b.Frequency
+				return a
+			}, 0)
+
+			const sum = [
+				{
+					"year": "2015",
+					"number": sumOf2015
+				},
+				{
+					"year": "2016",
+					"number": sumOf2016
+				}
+			];
 
              // Text for X-axis labels
              svg.append("g")
