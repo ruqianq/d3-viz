@@ -78,10 +78,10 @@ d3.csv("data/sas_test_data.csv", (dataForChart) => {
 
 function down(d, i) {
   if (!d.children || this.__transition__) return;
-  var end = duration + d.children.length * delay;
+  const end = duration + d.children.length * delay;
 
   // Mark any currently-displayed bars as exiting.
-  var exit = svg.selectAll(".enter")
+  const exit = svg.selectAll(".enter")
     .attr("class", "exit");
 
   // Entering nodes immediately obscure the clicked-on bar, so hide it.
@@ -90,7 +90,7 @@ function down(d, i) {
 
   // Enter the new bars for the clicked-on data.
   // Per above, entering bars are immediately visible.
-  var enter = bar(d)
+  const enter = bar(d)
     .attr("transform", stack(i))
     .style("opacity", 1);
 
@@ -108,10 +108,14 @@ function down(d, i) {
     .call(xAxis);
 
   // Transition entering bars to their new position.
-  var enterTransition = enter.transition()
+  const enterTransition = enter.transition()
     .duration(duration)
-    .delay(function(d, i) { return i * delay; })
-    .attr("transform", function(d, i) { return "translate(0," + barHeight * i * 1.2 + ")"; });
+    .delay(function (d, i) {
+      return i * delay;
+    })
+    .attr("transform", function (d, i) {
+      return "translate(0," + barHeight * i * 1.2 + ")";
+    });
 
   // Transition entering text.
   enterTransition.select("text")
@@ -123,7 +127,7 @@ function down(d, i) {
     .style("fill", function(d) { return color(!!d.children); });
 
   // Transition exiting bars to fade out.
-  var exitTransition = exit.transition()
+  const exitTransition = exit.transition()
     .duration(duration)
     .style("opacity", 1e-6)
     .remove();
@@ -143,15 +147,17 @@ function down(d, i) {
 
 function up(d) {
   if (!d.parent || this.__transition__) return;
-  var end = duration + d.children.length * delay;
+  const end = duration + d.children.length * delay;
 
   // Mark any currently-displayed bars as exiting.
-  var exit = svg.selectAll(".enter")
+  const exit = svg.selectAll(".enter")
     .attr("class", "exit");
 
   // Enter the new bars for the clicked-on data's parent.
-  var enter = bar(d.parent)
-    .attr("transform", function(d, i) { return "translate(0," + barHeight * i * 1.2 + ")"; })
+  const enter = bar(d.parent)
+    .attr("transform", function (d, i) {
+      return "translate(0," + barHeight * i * 1.2 + ")";
+    })
     .style("opacity", 1e-6);
 
   // Color the bars as appropriate.
@@ -170,7 +176,7 @@ function up(d) {
     .call(xAxis);
 
   // Transition entering bars to fade in over the full duration.
-  var enterTransition = enter.transition()
+  const enterTransition = enter.transition()
     .duration(end)
     .style("opacity", 1);
 
@@ -181,9 +187,11 @@ function up(d) {
     .on("end", function(p) { if (p === d) d3.select(this).style("fill-opacity", null); });
 
   // Transition exiting bars to the parent's position.
-  var exitTransition = exit.selectAll("g").transition()
+  const exitTransition = exit.selectAll("g").transition()
     .duration(duration)
-    .delay(function(d, i) { return i * delay; })
+    .delay(function (d, i) {
+      return i * delay;
+    })
     .attr("transform", stack(d.index));
 
   // Transition exiting text to fade out.
@@ -209,13 +217,15 @@ function up(d) {
 
 // Creates a set of bars for the given data node, at the specified index.
 function bar(d) {
-  var bar = svg.insert("g", ".y.axis")
+  const bar = svg.insert("g", ".y.axis")
     .attr("class", "enter")
     .attr("transform", "translate(0,5)")
     .selectAll("g")
     .data(d.children)
     .enter().append("g")
-    .style("cursor", function(d) { return !d.children ? null : "pointer"; })
+    .style("cursor", function (d) {
+      return !d.children ? null : "pointer";
+    })
     .on("click", down);
 
   bar.append("text")
@@ -234,9 +244,9 @@ function bar(d) {
 
 // A stateful closure for stacking bars horizontally.
 function stack(i) {
-  var x0 = 0;
+  let x0 = 0;
   return function(d) {
-    var tx = "translate(" + x0 + "," + barHeight * i * 1.2 + ")";
+    const tx = "translate(" + x0 + "," + barHeight * i * 1.2 + ")";
     x0 += x(d.value);
     return tx;
   };
