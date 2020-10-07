@@ -9,7 +9,32 @@
 		<script type="text/javascript">
 		// Define global array for data, to be used in the onDataReceived and drawChart function
 	    let  dataForChart = [];
-		
+
+		const svgHeight = 0.95*window.innerHeight, svgWidth=0.95*window.innerWidth, barPadding= 2;
+		const margin={top:svgHeight*0.02, right:svgWidth*0.005, bottom:svgHeight*0.3, left:svgWidth*0.01};
+		const width  = svgWidth - margin.left - margin.right;
+		const height = svgHeight - margin.top - margin.bottom;
+
+		const svg = d3.select("#chart")
+				.html(null)
+				.append("svg")
+				.attr("width", svgWidth)
+				.attr("height", svgHeight)
+				.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+		// set the ranges
+		const x = d3.scaleLinear().range([0, width]);
+		const y = d3.scaleBand().range([height, 0])
+				.paddingInner(0.3)
+				.paddingOuter(0.2);
+
+		// Tooltip
+		const tool_tip = d3.tip()
+				.attr("class", "d3-tip")
+				.html("<div id='tipDiv'></div>");
+
+		svg.call(tool_tip);
+
 		// Listener
 		// Call the listener window.attachEvent for IE, window.addEventListener for other browsers  
 		if (window.addEventListener) {
@@ -30,36 +55,12 @@
                            drawChart(); 		  
 		                   }
 
-		const x = d3.scaleLinear().range([0, width]);
-		const y = d3.scaleBand().range([height, 0])
-				.paddingInner(0.3)
-				.paddingOuter(0.2);
-
-		// Tooltip
-		const tool_tip = d3.tip()
-				.attr("class", "d3-tip")
-				.html("<div id='tipDiv'></div>");
-
-		svg.call(tool_tip);
-
 		//function to draw the bar chart							
 	    function drawChart() {	
 
-             if ( !dataForChart.length )	return;		
-			 
-	   	     let svgHeight = 0.95*window.innerHeight, svgWidth=0.95*window.innerWidth, barPadding= 2;
-             let margin={top:svgHeight*0.02, right:svgWidth*0.005, bottom:svgHeight*0.3, left:svgWidth*0.01};
-	   	     let width  = svgWidth - margin.left - margin.right;
-	   	     let height = svgHeight - margin.top - margin.bottom;
-	 
-	         // Define the size of the SVG container for the graph to be created in
-	         let svg = d3.select("#chart")
-		                 .html(null)
-		                 .append("svg")
-		                 .attr("width",svgWidth)
-		                 .attr("height",svgHeight)
-					     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+             if ( !dataForChart.length )	return;
 
+	         // Define the size of the SVG container for the graph to be created in
 
 
              // Text for X-axis labels
