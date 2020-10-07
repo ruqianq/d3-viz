@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<script type="text/javascript"  src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
 	</head>
 	<body>
 	    <div id="chart"> </div> 
@@ -10,7 +11,7 @@
 		// Define global array for data, to be used in the onDataReceived and drawChart function
 	    let  dataForChart = [];
 
-		const svgHeight = 0.95*window.innerHeight, svgWidth=0.95*window.innerWidth, barPadding= 2;
+		const svgHeight = 0.95*window.innerHeight, svgWidth=0.95*window.innerWidth
 		const margin={top:svgHeight*0.02, right:svgWidth*0.005, bottom:svgHeight*0.3, left:svgWidth*0.01};
 		const width  = svgWidth - margin.left - margin.right;
 		const height = svgHeight - margin.top - margin.bottom;
@@ -37,23 +38,23 @@
 
 		// Listener
 		// Call the listener window.attachEvent for IE, window.addEventListener for other browsers  
-		if (window.addEventListener) {
-		                              window.addEventListener("message",onDataReceived,false);
-									  window.addEventListener("resize",drawChart,false);
-		                             }
-
-		
-		// A function to receive the data and populate the array dataForChart
-	    function onDataReceived(event) {
-                           if (event && event.data) {
-                                     dataForChart = [];
-                                     for (let i = 0; i < event.data.rowCount; i++) { 
-				                                  dataForChart.push({ key:   event.data.data[i][0],
-                                                  value: event.data.data[i][1]   });  
-				                                  }
-  				                     }
-                           drawChart(); 		  
-		                   }
+		// if (window.addEventListener) {
+		//                               window.addEventListener("message",onDataReceived,false);
+		// 							  window.addEventListener("resize",drawChart,false);
+		//                              }
+		//
+		//
+		// // A function to receive the data and populate the array dataForChart
+	    // function onDataReceived(event) {
+        //                    if (event && event.data) {
+        //                              dataForChart = [];
+        //                              for (let i = 0; i < event.data.rowCount; i++) {
+		// 		                                  dataForChart.push({ key:   event.data.data[i][0],
+        //                                           value: event.data.data[i][1]   });
+		// 		                                  }
+  		// 		                     }
+        //                    drawChart();
+		//                    }
 
 		//function to draw the bar chart							
 	    function drawChart() {	
@@ -84,65 +85,120 @@
 				}
 			];
 
-             // Text for X-axis labels
-             svg.append("g")
-                .call(d3.axisBottom(xAxis))
-                .attr("transform","translate(0,"+height+ ")")
-           	    .selectAll("text")		 
-           	    .style("text-anchor", "end")
-           	    .attr("dx", "-1em")
-                .attr("dy", "-.6em")
-           	    .attr("transform","rotate(-90)")
-				.attr("font-family", "sans-serif")
-			    .attr("font-size", "13px");
+			y.domain(sum.map(d => d.year))
+			x.domain([0, d3.max(sum, d => d.number)])
+
+			const rects = svg.append('g').selectAll("rect").data(sum)
+
+			svg.append('g').call(d3.axisBottom(x))
+			svg.append('g').call(d3.axisLeft(y)).selectAll("text")
+					.attr("transform", "translate(-10,0)rotate(-45)")
+					.style("text-anchor", "end");
+
+			rects.enter().append('rect')
+					.attr('x', 0)
+					.attr('y', (d) => y(d.year))
+					.attr('height', y.bandwidth)
+					.attr('width', d => x(d.number))
+					.attr('fill', '#69b3a2')
+					.on('mouseover', function (d) {
+						tool_tip.show();
+						var tipSVG = d3.select("#tipDiv")
+								.append("svg")
+								.attr("width", 220)
+								.attr("height", 80);
+						let currentYear = d.year
+						const xTip = d3.scaleBand()
+								.domain(data.map(d => d.sas_mnth_of_crsh)).
+								range([0, 130]);
+						const yTip = d3.scaleLinear()
+								.domain([d3.min(dataForChart, d => d.Frequency), d3.max(data, d => d.Frequency)])
+								.range([50, 0])
+
+						tipSVG.append("path")
+								.datum(dataForChart.filter(function (d) {
+									return d.sas_yr_of_crsh === currentYear
+								}))
+								.attr("fill", "none")
+								.attr("stroke", "steelblue")
+								.attr("stroke-width", 1.5)
+								.attr("d", d3.line()
+										.x(function (d) {
+											return xTip(d.sas_mnth_of_crsh)
+										})
+										.y(function (d) {
+											return yTip(d.Frequency)
+										})
+								)
+						tipSVG.append("g").attr("transform", "translate(0," + 50 + ")")
+								.call(d3.axisBottom(xTip)).selectAll("text")
+								.attr("transform", "translate(-10,0)rotate(-90)")
+								.style("text-anchor", "end");
+						tipSVG.append("g")
+								.call(d3.axisLeft(y));
+					})
+					.on('mouseout', tool_tip.hide);
+
+             // // Text for X-axis labels
+             // svg.append("g")
+             //    .call(d3.axisBottom(xAxis))
+             //    .attr("transform","translate(0,"+height+ ")")
+           	//     .selectAll("text")
+           	//     .style("text-anchor", "end")
+           	//     .attr("dx", "-1em")
+             //    .attr("dy", "-.6em")
+           	//     .attr("transform","rotate(-90)")
+				// .attr("font-family", "sans-serif")
+			 //    .attr("font-size", "13px");
             					   	   
 	         // Create the bars in the bar chart
-	         svg.selectAll("rect")
-			    .data(dataForChart)
-			    .enter()
-			    .append("rect")
-			    .attr("x", function(d, i) {return i * (width / dataForChart.length); })
-		        .attr("y", function(d) {return  height-((height / d3.max(dataForChart, d => d.value))*d.value); })
-			    .attr("width", width / dataForChart.length - barPadding)
-			    .attr("height", function(d) {return (height / d3.max(dataForChart, d => d.value))* d.value ; })
-			    .attr("fill", "#145972")
-		        .on('mouseover', function (d, i) {
-				                                  let current_value= d.value;
-                                                  d3.selectAll('rect')
-                                                    .attr('fill', function(d) {
-													                           if      (d.value < current_value ) {return "#A1C7D5"}
-					                                                           else if (d.value > current_value ) {return "#7B98A3"}
-					                                                           else                               {return "#145972"}  ;
-																			  } );
-								                 })	
-		        .on('mouseout', function (d, i) { 
-			                                     let current_value= d.value;
-                                                 d3.selectAll('rect')
-                                                   .attr('fill', "#145972");
-				                                });
-                
-  	            // Add values to display in each bar in the bar chart
-                svg.selectAll(".text")  		
-	               .data(dataForChart)
-	               .enter()
-	               .append("text")
-	               .attr("class","label")
-	               .attr("x", function(d, i) {
-				                              return i * (width / dataForChart.length)+0.5*(width / dataForChart.length ) ; 
-											 })
-	               .attr("y", function(d) {
-				                           return height-((height / d3.max(dataForChart, d => d.value))*d.value); 
-										  })
-	               .attr("dy", "1.1em")
-			       .attr("dx", "-1em")
-	               .text(function(d) { return d.value; })
-			       .attr("font-family", "sans-serif")
-			       .attr("font-size", "15px")
-			       .attr("fill", "white");
-
+	         // svg.selectAll("rect")
+			 //    .data(dataForChart)
+			 //    .enter()
+			 //    .append("rect")
+			 //    .attr("x", function(d, i) {return i * (width / dataForChart.length); })
+		     //    .attr("y", function(d) {return  height-((height / d3.max(dataForChart, d => d.value))*d.value); })
+			 //    .attr("width", width / dataForChart.length - barPadding)
+			 //    .attr("height", function(d) {return (height / d3.max(dataForChart, d => d.value))* d.value ; })
+			 //    .attr("fill", "#145972")
+		     //    .on('mouseover', function (d, i) {
+				//                                   let current_value= d.value;
+             //                                      d3.selectAll('rect')
+             //                                        .attr('fill', function(d) {
+				// 									                           if      (d.value < current_value ) {return "#A1C7D5"}
+				// 	                                                           else if (d.value > current_value ) {return "#7B98A3"}
+				// 	                                                           else                               {return "#145972"}  ;
+				// 															  } );
+				// 				                 })
+		     //    .on('mouseout', function (d, i) {
+			 //                                     let current_value= d.value;
+             //                                     d3.selectAll('rect')
+             //                                       .attr('fill', "#145972");
+				//                                 });
+             //
+  	       //      // Add values to display in each bar in the bar chart
+             //    svg.selectAll(".text")
+	         //       .data(dataForChart)
+	         //       .enter()
+	         //       .append("text")
+	         //       .attr("class","label")
+	         //       .attr("x", function(d, i) {
+				//                               return i * (width / dataForChart.length)+0.5*(width / dataForChart.length ) ;
+				// 							 })
+	         //       .attr("y", function(d) {
+				//                            return height-((height / d3.max(dataForChart, d => d.value))*d.value);
+				// 						  })
+	         //       .attr("dy", "1.1em")
+			 //       .attr("dx", "-1em")
+	         //       .text(function(d) { return d.value; })
+			 //       .attr("font-family", "sans-serif")
+			 //       .attr("font-size", "15px")
+			 //       .attr("fill", "white");
+			 //
 	            }
-	  
-  </script>
+		drawChart();
+
+		</script>
 </body>
 	
 </html>
