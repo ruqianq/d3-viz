@@ -50,6 +50,18 @@ d3.csv("data/sas_test_data.csv", (dataForChart) => {
   months.push(month)
   year["months"] = months
   result.push(year)
+  console.log(result)
 
+  y.domain(result.map(d => d.year))
+  x.domain([0, d3.max(result, d => d.total)])
+
+  const rects = g.selectAll("rect").data(result)
+
+  rects.enter().append('rect')
+    .attr('x', 0)
+    .attr('y', (d) => y(d.year))
+    .attr('height', y.bandwidth)
+    .attr('width', d => x(d.total))
+    .attr('fill', '#69b3a2')
 
 })
