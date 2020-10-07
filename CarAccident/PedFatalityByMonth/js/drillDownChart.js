@@ -1,6 +1,6 @@
-const margin = {top: 10, right: 10, bottom: 130, left: 100},
-  width = 600 - margin.left - margin.right,
-  height = 400 - margin.top - margin.bottom;
+const margin = {top: 30, right: 120, bottom: 0, left: 120},
+  width = 960 - margin.left - margin.right,
+  height = 500 - margin.top - margin.bottom;
 
 const svg = d3.select('#chart-area').append('svg')
   .attr('width', width + margin.left + margin.right)
@@ -15,45 +15,49 @@ const y = d3.scaleBand().range([height, 0])
   .paddingInner(0.3)
   .paddingOuter(0.2);
 
+const duration = 750,
+  delay = 25;
+
 d3.csv("data/sas_test_data.csv", (dataForChart) => {
   dataForChart.forEach(d => {
     d.Frequency = parseInt(d.Frequency.replace(/,/g, ''))
   })
-  let yearlyTotal = 0;
-  let p = 0;
-  let result = [];
-  let months = [];
-  let year = {}
-  let month = {}
 
-  while (p < dataForChart.length - 1) {
-    month["number"] = dataForChart[p].Frequency
-    month["month"] = dataForChart[p].sas_mnth_of_crsh
-    months.push(month)
-    yearlyTotal += dataForChart[p].Frequency
-    if (dataForChart[p].sas_yr_of_crsh !== dataForChart[p + 1].sas_yr_of_crsh){
-      year["year"] = dataForChart[p].sas_yr_of_crsh
-      year["total"] = yearlyTotal
-      year["months"] = months
-      result.push(year)
+  let allYears = {}
+  let currentYear = dataForChart[0].sas_yr_of_crsh
+  let years = []
 
-      yearlyTotal = 0
-      months = [];
-      year = {}
+  let children = [];
+  for (let i of dataForChart) {
+    let child = {}
+    if (i.sas_yr_of_crsh !== currentYear) {
+      let year = {}
+      year["name"] = currentYear
+      year["children"] = children
+      years.push(year)
+      currentYear = i.sas_yr_of_crsh
+      children = []
     }
-    p++
+    child["name"] = i.sas_mnth_of_crsh
+    child["value"] = i.Frequency
+    children.push(child)
+
+    if (dataForChart.indexOf(i) === dataForChart.length - 1) {
+      let year = {}
+      year["name"] = currentYear
+      year["children"] = children
+      years.push(year)
+    }
   }
-  year["year"] = dataForChart[p].sas_yr_of_crsh
-  year["total"] = yearlyTotal
-  month["number"] = dataForChart[p].Frequency
-  month["month"] = dataForChart[p].sas_mnth_of_crsh
-  months.push(month)
-  year["months"] = months
-  result.push(year)
-  console.log(result)
+  allYears["name"] = "allYears"
+  allYears["children"] = years
+
+  const root = d3.hierarchy(allYears)
+    .sum(function(d) { return d.value; });
+  x.domain([0, root.value]).nice();
+  down(root, 0);
 
   y.domain(result.map(d => d.year))
-  x.domain([0, d3.max(result, d => d.total)])
 
   const rects = g.selectAll("rect").data(result)
 
