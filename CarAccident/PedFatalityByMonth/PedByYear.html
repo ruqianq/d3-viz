@@ -84,12 +84,12 @@
   function drawChart() {
     if (!dataForChart.length) return;
 
-    const sumOf2015 = dataForChart.filter(d => d.sas_yr_of_crsh === "2015").reduce((a, b) => {
+    const sumOf2015 = dataForChart.filter(d => d.sas_yr_of_crsh === "2015" || 2015).reduce((a, b) => {
       a += b.Frequency
       return a
     }, 0)
 
-    const sumOf2016 = dataForChart.filter(d => d.sas_yr_of_crsh === "2016").reduce((a, b) => {
+    const sumOf2016 = dataForChart.filter(d => d.sas_yr_of_crsh === "2016" || 2016).reduce((a, b) => {
       a += b.Frequency
       return a
     }, 0)
