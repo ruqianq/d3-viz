@@ -48,34 +48,42 @@
   // Listener
   // Call the listener window.attachEvent for IE, window.addEventListener for other browsers
   if (window.addEventListener) {
-                                window.addEventListener("message",onDataReceived,false);
-  							  window.addEventListener("resize",drawChart,false);
-                               }
+    window.addEventListener("message", onDataReceived, false);
+    window.addEventListener("resize", drawChart, false);
+  }
 
 
   // A function to receive the data and populate the array dataForChart
   function onDataReceived(event) {
-                     if (event && event.data) {
-                               for (let i = 0; i < event.data.rowCount; i++) {
-  		                                  dataForChart.push(
-  		                                    {
-                                            sas_yr_of_crsh:   event.data.data[i][0],
-                                            sas_mnth_of_crsh: event.data.data[i][1],
-                                              Frequency: event.data.data[i][2]
-  		                                    });
-  		                                  }
-  		                     }
-                     drawChart();
-                     }
+    if (event && event.data) {
+      console.log("data from event")
+      console.log(event.data.data)
+      for (let i = 0; i < event.data.rowCount; i++) {
+        console.log("current data")
+        console.log(event.data.data[i])
+        console.log("data object")
+        console.log({
+          sas_yr_of_crsh: event.data.data[i][0],
+          sas_mnth_of_crsh: event.data.data[i][1],
+          Frequency: event.data.data[i][2]
+        })
+        dataForChart.push(
+          {
+            sas_yr_of_crsh: event.data.data[i][0],
+            sas_mnth_of_crsh: event.data.data[i][1],
+            Frequency: event.data.data[i][2]
+          });
+      }
+    }
+    console.log("data after parse")
+    console.log(dataForChart)
+    drawChart();
+  }
 
   //function to draw the bar chart
   function drawChart() {
     if (!dataForChart.length) return;
 
-
-    dataForChart.forEach(d => {
-      d.Frequency = parseInt(d.Frequency.replace(/,/g, ''))
-    })
     const sumOf2015 = dataForChart.filter(d => d.sas_yr_of_crsh === "2015").reduce((a, b) => {
       a += b.Frequency
       return a
