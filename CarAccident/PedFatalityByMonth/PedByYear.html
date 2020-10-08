@@ -69,8 +69,6 @@
   function drawChart() {
     if (!dataForChart.length) return;
 
-    console.log(dataForChart)
-  }
 
     dataForChart.forEach(d => {
       d.Frequency = parseInt(d.Frequency.replace(/,/g, ''))
@@ -151,6 +149,7 @@
           .call(d3.axisLeft(yTip));
       })
       .on('mouseout', tool_tip.hide);
+  }
 </script>
 </body>
 
