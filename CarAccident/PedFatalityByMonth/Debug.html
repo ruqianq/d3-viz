@@ -29,14 +29,17 @@
           value: event.data.data[i][1]   });
       }
     }
+    console.log("inside function" + dataForChart)
+
     drawChart();
   }
+
+  console.log(dataForChart)
 
   //function to draw the bar chart
   function drawChart() {
     if (!dataForChart.length) return;
 
-    console.log(dataForChart)
   }
 </script>
 </body>
