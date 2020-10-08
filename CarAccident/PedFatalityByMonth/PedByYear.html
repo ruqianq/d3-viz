@@ -56,10 +56,13 @@
   // A function to receive the data and populate the array dataForChart
   function onDataReceived(event) {
                      if (event && event.data) {
-                               dataForChart = [];
                                for (let i = 0; i < event.data.rowCount; i++) {
-  		                                  dataForChart.push({ key:   event.data.data[i][0],
-                                            value: event.data.data[i][1]   });
+  		                                  dataForChart.push(
+  		                                    {
+                                            sas_yr_of_crsh:   event.data.data[i][0],
+                                            sas_mnth_of_crsh: event.data.data[i][1],
+                                              Frequency: event.data.data[i][2]
+  		                                    });
   		                                  }
   		                     }
                      drawChart();
