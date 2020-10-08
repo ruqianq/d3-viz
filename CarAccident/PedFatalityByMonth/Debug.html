@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+  let dataForChart = [];
+
+  const svgHeight = 0.95 * window.innerHeight, svgWidth = 0.95 * window.innerWidth
+  const margin = {top: svgHeight * 0.02, right: svgWidth * 0.005, bottom: svgHeight * 0.3, left: svgWidth * 0.01};
+  const width = svgWidth - margin.left - margin.right;
+  const height = svgHeight - margin.top - margin.bottom;
+
+  if (window.addEventListener) {
+    window.addEventListener("message",onDataReceived,false);
+    window.addEventListener("resize",drawChart,false);
+  }
+
+
+  // A function to receive the data and populate the array dataForChart
+  function onDataReceived(event) {
+    if (event && event.data) {
+      dataForChart = [];
+      for (let i = 0; i < event.data.rowCount; i++) {
+        dataForChart.push({ key:   event.data.data[i][0],
+          value: event.data.data[i][1]   });
+      }
+    }
+    drawChart();
+  }
+
+  //function to draw the bar chart
+  function drawChart() {
+    if (!dataForChart.length) return;
+
+    console.log(dataForChart)
+  }
+</script>
+</body>
+</html>
