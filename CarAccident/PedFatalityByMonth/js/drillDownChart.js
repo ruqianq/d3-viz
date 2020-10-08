@@ -235,6 +235,12 @@ function bar(d) {
     .style("text-anchor", "end")
     .text(function(d) { return d.data.name; });
 
+  bar.append("text")
+    .attr("x", margin.left + 600)
+    .attr("y", barHeight / 2)
+    .attr("dy", ".35em")
+    .text(function(d) { return d.data.value; });
+
   bar.append("rect")
     .attr("width", function(d) { return x(d.value); })
     .attr("height", barHeight);
@@ -252,3 +258,13 @@ function stack(i) {
   };
 }
 
+// const barStep = 27
+//
+// function stagger() {
+//   let value = 0;
+//   return (d, i) => {
+//     const t = `translate(${x(value) - x(0)},${barStep * i})`;
+//     value += d.value;
+//     return t;
+//   };
+// }
