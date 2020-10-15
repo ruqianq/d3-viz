@@ -61,15 +61,17 @@ yAxis.append("text")
 
 d3.json("data/coins.json").then(data => {
 
-	const coins = Object.keys(data)
-	for (let c of coins) {
+	Object.keys(data).forEach(c => {
 		data[c].forEach(d => {
 			d.date = parseTime(d.date)
 			d.price_usd = Number(d.price_usd)
 			d.market_cap = Number(d.market_cap)
 			d["24h_vol"] = Number(d["24h_vol"])
 		})
-	}
+	})
+	formattedData = data
+
+	update(formattedData)
 
 	/******************************** Tooltip Code ********************************/
 
@@ -135,11 +137,7 @@ function update(data) {
 	const type = $('#coin-select').val()
 	const value = $('#var-select').val()
 
-	const filterData = data[type].map(d => {
-		return d[value]
-	})
-
-	console.log(filterData)
+	const filterData = data[type]
 
 	x.domain(d3.extent(filterData, d => d.date))
 	y.domain([
