@@ -8,6 +8,8 @@ const MARGIN = { LEFT: 20, RIGHT: 100, TOP: 50, BOTTOM: 100 }
 const WIDTH = 800 - MARGIN.LEFT - MARGIN.RIGHT
 const HEIGHT = 500 - MARGIN.TOP - MARGIN.BOTTOM
 
+let formattedData
+
 const svg = d3.select("#chart-area").append("svg")
   .attr("width", WIDTH + MARGIN.LEFT + MARGIN.RIGHT)
   .attr("height", HEIGHT + MARGIN.TOP + MARGIN.BOTTOM)
@@ -19,6 +21,13 @@ const g = svg.append("g")
 const parseTime = d3.timeParse("%d/%m/%Y")
 // for tooltip
 const bisectDate = d3.bisector(d => d.date).left
+
+// Tooltip
+// const tip = d3.tip()
+// 	.attr('class', 'd3-tip')
+// 	.html(d => {
+// 	})
+// g.call(tip)
 
 // scales
 const x = d3.scaleTime().range([0, WIDTH])
@@ -36,6 +45,9 @@ const xAxis = g.append("g")
 	.attr("transform", `translate(0, ${HEIGHT})`)
 const yAxis = g.append("g")
 	.attr("class", "y axis")
+
+xAxis.call(xAxisCall.scale(x))
+yAxis.call(yAxisCall.scale(y))
     
 // y-axis label
 yAxis.append("text")
@@ -55,6 +67,7 @@ const line = d3.line()
 
 d3.json("data/coins.json").then(data => {
 
+	formattedData = data
 	let bitcoin = data["bitcoin"]
 
 	bitcoin.forEach(d => {
@@ -63,7 +76,6 @@ d3.json("data/coins.json").then(data => {
 		d.market_cap = Number(d.market_cap)
 		d["24h_vol"] = Number(d["24h_vol"])
 	})
-	console.log(bitcoin)
 
 	// set scale domains
 	x.domain(d3.extent(bitcoin, d => d.date))
@@ -71,10 +83,6 @@ d3.json("data/coins.json").then(data => {
 		d3.min(bitcoin, d => d[value]) / 1.005,
 		d3.max(bitcoin, d => d[value]) * 1.005
 	])
-
-	// generate axes once scales have been set
-	xAxis.call(xAxisCall.scale(x))
-	yAxis.call(yAxisCall.scale(y))
 
 	// add line to chart
 	g.append("path")
@@ -129,3 +137,15 @@ d3.json("data/coins.json").then(data => {
 	
 	/******************************** Tooltip Code ********************************/
 })
+
+$("#coin-select")
+	.on("change", () => {
+		update(formattedData)
+	})
+
+function update(data) {
+
+	const type = $("#coin-select").val()
+
+	console.log(data[type])
+}
