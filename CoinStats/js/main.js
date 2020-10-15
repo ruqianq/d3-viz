@@ -138,14 +138,23 @@ d3.json("data/coins.json").then(data => {
 	/******************************** Tooltip Code ********************************/
 })
 
-$("#coin-select")
+$('#coin-select')
+	.on("change", () => {
+		update(formattedData)
+	})
+
+$('#var-select')
 	.on("change", () => {
 		update(formattedData)
 	})
 
 function update(data) {
 
-	const type = $("#coin-select").val()
+	const type = $('#coin-select').val()
+	const value = $('#var-select').val()
 
-	console.log(data[type])
+	const filterData = data[type].map(d => {
+		return d[value]
+	})
+	console.log(filterData)
 }
