@@ -4,7 +4,7 @@
 *    Project 3 - CoinStats
 */
 
-const MARGIN = {LEFT: 20, RIGHT: 100, TOP: 50, BOTTOM: 100}
+const MARGIN = {LEFT: 100, RIGHT: 100, TOP: 50, BOTTOM: 100}
 const WIDTH = 800 - MARGIN.LEFT - MARGIN.RIGHT
 const HEIGHT = 500 - MARGIN.TOP - MARGIN.BOTTOM
 
@@ -19,6 +19,7 @@ const g = svg.append("g")
 
 // time parser for x-scale
 const parseTime = d3.timeParse("%d/%m/%Y")
+const formatTime = d3.timeFormat("%d/%m/%Y")
 // for tooltip
 const bisectDate = d3.bisector(d => d.date).left
 
@@ -46,18 +47,22 @@ const xAxis = g.append("g")
 const yAxis = g.append("g")
   .attr("class", "y axis")
 
-xAxis.call(xAxisCall.scale(x))
-yAxis.call(yAxisCall.scale(y))
-
-// y-axis label
-yAxis.append("text")
-  .attr("class", "axis-title")
-  .attr("transform", "rotate(-90)")
-  .attr("y", 6)
-  .attr("dy", ".71em")
-  .style("text-anchor", "end")
-  .attr("fill", "#5D6971")
-
+// axis labels
+const xLabel = g.append("text")
+	.attr("class", "x axisLabel")
+	.attr("y", HEIGHT + 50)
+	.attr("x", WIDTH / 2)
+	.attr("font-size", "20px")
+	.attr("text-anchor", "middle")
+	.text("Time")
+const yLabel = g.append("text")
+	.attr("class", "y axisLabel")
+	.attr("transform", "rotate(-90)")
+	.attr("y", -60)
+	.attr("x", -170)
+	.attr("font-size", "20px")
+	.attr("text-anchor", "middle")
+	.text("Price ($)")
 
 d3.json("data/coins.json").then(data => {
 
@@ -75,14 +80,26 @@ d3.json("data/coins.json").then(data => {
 })
 
 $('#coin-select')
-  .on("change",
-    update
-  )
+  .on("change", update)
 
 $('#var-select')
-  .on("change",
-    update
-  )
+  .on("change", update)
+
+$("#date-slider").slider({
+	range: true,
+	max: parseTime("31/10/2017").getTime(),
+	min: parseTime("12/5/2013").getTime(),
+	step: 86400000, // one day
+	values: [
+		parseTime("12/5/2013").getTime(),
+		parseTime("31/10/2017").getTime()
+	],
+	slide: (event, ui) => {
+		$("#dateLabel1").text(formatTime(new Date(ui.values[0])))
+		$("#dateLabel2").text(formatTime(new Date(ui.values[1])))
+		update()
+	}
+})
 
 function update() {
 
@@ -91,14 +108,32 @@ function update() {
 
   const type = $('#coin-select').val()
   const value = $('#var-select').val()
+	const sliderValues = $("#date-slider").slider("values")
 
-  const filterData = formattedData[type]
+	const filterData = formattedData[type].filter(d => {
+		return ((d.date >= sliderValues[0]) && (d.date <= sliderValues[1]))
+	})
 
   x.domain(d3.extent(filterData, d => d.date))
   y.domain([
     d3.min(filterData, d => d[value]) / 1.005,
     d3.max(filterData, d => d[value]) * 1.005
   ])
+
+	const formatSi = d3.format(".2s")
+	function formatAbbreviation(x) {
+		const s = formatSi(x)
+		switch (s[s.length - 1]) {
+			case "G": return s.slice(0, -1) + "B" // billions
+			case "k": return s.slice(0, -1) + "K" // thousands
+		}
+		return s
+	}
+
+	xAxisCall.scale(x)
+	xAxis.transition(t).call(xAxisCall)
+	yAxisCall.scale(y)
+	yAxis.transition(t).call(yAxisCall.tickFormat(formatAbbreviation))
 
   const line = d3.line()
     .x(d => x(d.date))
@@ -156,4 +191,10 @@ function update() {
 	}
 
 	/******************************** Tooltip Code ********************************/
+
+		// Update y-axis label
+	const newText = (value === "price_usd") ? "Price ($)"
+		: (value === "market_cap") ? "Market Capitalization ($)"
+			: "24 Hour Trading Volume ($)"
+	yLabel.text(newText)
 }
