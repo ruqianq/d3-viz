@@ -58,8 +58,9 @@ d3.json("data/coins.json").then(data => {
 
 	bitcoin.forEach(d => {
 		d.date = parseTime(d.date)
-		d.value = Number(d.value)
-
+		d.price_usd = Number(d.price_usd)
+		d.market_cap = Number(d.market_cap)
+		d["24h_vol"] = Number(d["24h_vol"])
 	})
 	console.log(bitcoin)
 
