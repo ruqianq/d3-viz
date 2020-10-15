@@ -45,7 +45,6 @@ yAxis.append("text")
 	.attr("dy", ".71em")
 	.style("text-anchor", "end")
 	.attr("fill", "#5D6971")
-	.text("Population)")
 
 // line path generator
 const line = d3.line()
@@ -64,12 +63,12 @@ d3.json("data/coins.json").then(data => {
 	})
 	console.log(bitcoin)
 
-
+	let value = ["price_usd"]
 	// set scale domains
 	x.domain(d3.extent(data, d => d.date))
 	y.domain([
-		d3.min(data, d => d.value) / 1.005, 
-		d3.max(data, d => d.value) * 1.005
+		d3.min(bitcoin, d => d[value]) / 1.005,
+		d3.max(bitcoin, d => d[value]) * 1.005
 	])
 
 	// generate axes once scales have been set
@@ -121,9 +120,9 @@ d3.json("data/coins.json").then(data => {
 		const d0 = data[i - 1]
 		const d1 = data[i]
 		const d = x0 - d0.date > d1.date - x0 ? d1 : d0
-		focus.attr("transform", `translate(${x(d.date)}, ${y(d.value)})`)
+		focus.attr("transform", `translate(${x(d.date)}, ${y(d[value])})`)
 		focus.select("text").text(d.value)
-		focus.select(".x-hover-line").attr("y2", HEIGHT - y(d.value))
+		focus.select(".x-hover-line").attr("y2", HEIGHT - y(d[value]))
 		focus.select(".y-hover-line").attr("x2", -x(d.date))
 	}
 	
