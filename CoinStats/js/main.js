@@ -22,6 +22,13 @@ const parseTime = d3.timeParse("%d/%m/%Y")
 // for tooltip
 const bisectDate = d3.bisector(d => d.date).left
 
+// add the line for the first time
+g.append("path")
+	.attr("class", "line")
+	.attr("fill", "none")
+	.attr("stroke", "grey")
+	.attr("stroke-width", "3px")
+
 // Tooltip
 // const tip = d3.tip()
 // 	.attr('class', 'd3-tip')
@@ -71,7 +78,7 @@ d3.json("data/coins.json").then(data => {
 	})
 	formattedData = data
 
-	update(formattedData)
+	update()
 
 	/******************************** Tooltip Code ********************************/
 
@@ -120,16 +127,16 @@ d3.json("data/coins.json").then(data => {
 })
 
 $('#coin-select')
-	.on("change", () => {
-		update(formattedData)
-	})
+	.on("change",
+		update
+	)
 
 $('#var-select')
-	.on("change", () => {
-		update(formattedData)
-	})
+	.on("change",
+		update
+	)
 
-function update(data) {
+function update() {
 
 	const t = d3.transition()
 		.duration(100)
@@ -137,7 +144,7 @@ function update(data) {
 	const type = $('#coin-select').val()
 	const value = $('#var-select').val()
 
-	const filterData = data[type]
+	const filterData = formattedData[type]
 
 	x.domain(d3.extent(filterData, d => d.date))
 	y.domain([
@@ -150,14 +157,8 @@ function update(data) {
 		.x(d => x(d.date))
 		.y(d => y(d[value]))
 
-	line.exit().remove()
-
-	// add line to chart
-	g.append("path")
-		.attr("class", "line")
-		.attr("fill", "none")
-		.attr("stroke", "grey")
-		.attr("stroke-width", "3px")
+	g.select(".line")
+		.transition(t)
 		.attr("d", line(filterData))
 
 }
