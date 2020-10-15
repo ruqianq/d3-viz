@@ -58,39 +58,18 @@ yAxis.append("text")
 	.style("text-anchor", "end")
 	.attr("fill", "#5D6971")
 
-let value = "price_usd"
-
-// line path generator
-const line = d3.line()
-	.x(d => x(d.date))
-	.y(d => y(d[value]))
 
 d3.json("data/coins.json").then(data => {
 
-	formattedData = data
-	let bitcoin = data["bitcoin"]
-
-	bitcoin.forEach(d => {
-		d.date = parseTime(d.date)
-		d.price_usd = Number(d.price_usd)
-		d.market_cap = Number(d.market_cap)
-		d["24h_vol"] = Number(d["24h_vol"])
-	})
-
-	// set scale domains
-	x.domain(d3.extent(bitcoin, d => d.date))
-	y.domain([
-		d3.min(bitcoin, d => d[value]) / 1.005,
-		d3.max(bitcoin, d => d[value]) * 1.005
-	])
-
-	// add line to chart
-	g.append("path")
-		.attr("class", "line")
-		.attr("fill", "none")
-		.attr("stroke", "grey")
-		.attr("stroke-width", "3px")
-		.attr("d", line(bitcoin))
+	const coins = Object.keys(data)
+	for (let c of coins) {
+		data[c].forEach(d => {
+			d.date = parseTime(d.date)
+			d.price_usd = Number(d.price_usd)
+			d.market_cap = Number(d.market_cap)
+			d["24h_vol"] = Number(d["24h_vol"])
+		})
+	}
 
 	/******************************** Tooltip Code ********************************/
 
@@ -150,11 +129,37 @@ $('#var-select')
 
 function update(data) {
 
+	const t = d3.transition()
+		.duration(100)
+
 	const type = $('#coin-select').val()
 	const value = $('#var-select').val()
 
 	const filterData = data[type].map(d => {
 		return d[value]
 	})
+
 	console.log(filterData)
+
+	x.domain(d3.extent(filterData, d => d.date))
+	y.domain([
+		d3.min(filterData, d => d[value]) / 1.005,
+		d3.max(filterData, d => d[value]) * 1.005
+	])
+
+	// line path generator
+	const line = d3.line()
+		.x(d => x(d.date))
+		.y(d => y(d[value]))
+
+	line.exit().remove()
+
+	// add line to chart
+	g.append("path")
+		.attr("class", "line")
+		.attr("fill", "none")
+		.attr("stroke", "grey")
+		.attr("stroke-width", "3px")
+		.attr("d", line(filterData))
+
 }
